@@ -33,3 +33,20 @@ class Post(models.Model):
 
     def num_of_downvotes(self):
         return self.down_votes.count()
+
+
+# model for commenting on a post
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    comment = models.TextField()
+    created_on = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)
+
+
+    class Meta:
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f"Comment {self.comment} by {self.name}"
