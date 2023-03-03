@@ -10,15 +10,18 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='forum_posts')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='forum_posts')
     team = models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now=True)
     updated_on = models.DateTimeField(auto_now=True)
     excerpt = models.TextField(max_length=300)
     feature_image = CloudinaryField('image', default='placeholder')
     post_content = models.TextField()
-    up_votes = models.ManyToManyField(User, related_name='forum_up_votes', blank=True)
-    down_votes = models.ManyToManyField(User, related_name='forum_down_votes', blank=True)
+    up_votes = models.ManyToManyField(
+        User, related_name='forum_up_votes', blank=True)
+    down_votes = models.ManyToManyField(
+        User, related_name='forum_down_votes', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     tags = TaggableManager()
 
@@ -37,16 +40,17 @@ class Post(models.Model):
 
 # model for commenting on a post
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
     comment = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
-
+    tags = TaggableManager()
 
     class Meta:
         ordering = ['created_on']
 
     def __str__(self):
-        return f"Comment {self.comment} by {self.name}"
+        return f"Comment by {self.name}"
