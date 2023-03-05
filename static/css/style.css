@@ -43,6 +43,10 @@ body{
     border-radius: 10%;
 }
 
+.head-nav {
+    margin-bottom: 1.5em;
+}
+
 /******************************************* footer */
 
 .page-footer {
@@ -103,4 +107,11 @@ body{
     
     height: 200px;
     object-fit: contain;
+}
+
+/******************************** pagination */
+
+.page-navigation {
+    background-color: white;
+    margin-bottom: .5em;
 }

@@ -14,18 +14,18 @@
                         {% if "placeholder" in post.feature_image.url %}
                         <img src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
 
-                        <h5 class="card-title">{{ post.team }}</h5>
+                        <h5 class="card-title title-text">{{ post.team }}</h5>
                         {% else %}
                         <img src=" {{ post.feature_image.url }} ">
 
-                        <h5 class="card-title">{{ post.team }}</h5>
+                        <h5 class="card-title title-text">{{ post.team }}</h5>
                         {% endif %}
                     </div>
                     <div class="card-content">
-                        <h5> {{ post.title }} </h5>
-                        <p> {{ post.excerpt }} </p>
+                        <h5 class="title-text"> {{ post.title }} </h5>
+                        <p class="body-text"> {{ post.excerpt }} </p>
                     </div>
-                    <div class="card-action">
+                    <div class="card-action body-text">
                         <a href="#">This is a link</a>
                     </div>
                 </div>
@@ -39,11 +39,13 @@
         </div>
     </div>
         <!-- boilerplate code from django -->
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
+        
+    </div>
+    {% if is_paginated %}
+        <nav aria-label="Page navigation" class="page-navigation z-depth-0">
             <ul class="pagination">
-                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-                {% if page_obj.has_prevoius %}
+                
+                {% if page_obj.has_previous %}
                 <li>
                     <a href="?page={{ page_obj.previous_page_number }}" class="waves-effect">
                         &laquo; PREV
@@ -57,10 +59,9 @@
                     </a>
                 </li>
                 {% endif %}
-                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                
             </ul>
         </nav>
         {% endif %}
-    </div>
 
 {% endblock %}
