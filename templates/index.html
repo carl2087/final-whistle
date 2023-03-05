@@ -2,4 +2,65 @@
 
 {% block content %}
 
+<div class="row">
+    <!-- forum entries column -->
+    <div class="col s12">
+        <div class="row">
+            {% for post in post_list %}
+
+            <div class="col s3">
+                <div class="card medium">
+                    <div class="card-image">
+                        {% if "placeholder" in post.feature_image.url %}
+                        <img src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
+
+                        <h5 class="card-title">{{ post.team }}</h5>
+                        {% else %}
+                        <img src=" {{ post.feature_image.url }} ">
+
+                        <h5 class="card-title">{{ post.team }}</h5>
+                        {% endif %}
+                    </div>
+                    <div class="card-content">
+                        <h5> {{ post.title }} </h5>
+                        <p> {{ post.excerpt }} </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+            </div>
+
+            {% if forloop.counter|divisibleby:4 %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+        <!-- boilerplate code from django -->
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                {% if page_obj.has_prevoius %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="waves-effect">
+                        &laquo; PREV
+                    </a>
+                </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}" class="waves-effect">
+                        NEXT &raquo;
+                    </a>
+                </li>
+                {% endif %}
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+
 {% endblock %}

@@ -86,3 +86,21 @@ body{
 .social-links-margin {
     margin-left: 2em;
 }
+
+/******************************** forum post list cards */
+
+.card-title {
+    background-color: #1c315e;
+    margin-bottom: 0;
+    border-radius: 5%;
+}
+
+.card .card-image .card-title {
+    padding: 10px;
+}
+
+.card .card-image img {
+    
+    height: 200px;
+    object-fit: contain;
+}
