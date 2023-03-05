@@ -1,4 +1,88 @@
+/******************************* Google fonts import */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+
+/*************** fix footer to bottom of page navbar */
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/******************** special margins/paddings/text */
+
+.no-padding-bottom {
+    padding-bottom:0px !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.title-text {
+    font-family: 'Nunito', sans-serif;
+}
+
+.body-text {
+    font-family: 'Rubik', sans-serif;
+}
+
+/******************************************* navbar */
+
+.nav-wrapper {
+    background-color: #1c315e;
+}
+
 .brand-logo > img {
-    height: 1em;
-    margin: 5px;
+    height: 1.5em;
+    margin: .2em;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 10%;
+}
+
+/******************************************* footer */
+
+.page-footer {
+    background-color: #1c315e;
+    margin-top: auto;
+}
+
+.footer-copyright {
+    padding: 0;
+}
+
+.github-logo {
+    margin-left: 1em;
+    color: whitesmoke;
+}
+
+.github-logo:hover {
+    color: #227c70;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.copy-div {
+    text-align: center;
+}
+
+.foot-social > li {
+    display: inline;
+}
+
+.social-links {
+    color: whitesmoke;
+}
+
+.social-links:hover {
+    color: #227c70;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.social-links-margin {
+    margin-left: 2em;
 }

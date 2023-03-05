@@ -11,6 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Football forum to talk all things about your football team">
     <meta name="keywords" content="football, football forum, football fans">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/0f99558fa2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.png' %}"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -18,22 +22,20 @@
 
     <nav>
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo"><img src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1677874826/images-the-final-whistle/whistle-icon_ltdl1k.png"></a>
+            <a href="#" class="brand-logo"><img src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1677874826/images-the-final-whistle/whistle-icon_ltdl1k.png"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
+            <ul class="right hide-on-med-and-down title-text">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
             </ul>
         </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+    <ul class="sidenav title-text" id="mobile-demo">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
     </ul>
     
     <div class="container">
@@ -47,27 +49,27 @@
 
     <footer class="page-footer">
         <div class="container">
-            <div class="row">
+            <div class="row no-margin-bottom">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
+                    <h5 class="title-text">The Final Whistle</h5>
+                    <p class="body-text">Have <strong>YOUR</strong> say on all the action involving <strong>YOUR</strong> team.</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    <ul class="foot-social">
+                        <li><a class="social-links" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a></li>
+                        <li><a class="social-links-margin social-links" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl"></i></a></li>
+                        <li><a class="social-links-margin social-links" href="https://twitter.com/?lang=en" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright no-padding-bottom">
             <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <div class="row no-margin-bottom">
+                    <div class="col s12 copy-div">
+                        <p class="copyright title-text">Copyright &copy; Carl Ellis <span id="copyright"></span><a class="github-logo" href="https://github.com/carl2087?tab=repositories" target="_blank"><i class="fa-brands fa-square-github fa-xl"></i></a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
