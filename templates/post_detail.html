@@ -2,4 +2,57 @@
 
 {% block content %}
 
+<div class="row">
+    <div class="col s6">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.author }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col s6">
+        {% if "placeholder" in post.feature_image.url %}
+        <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+        {% else %}
+        <img src=" {{ post.feature_image.url }}" width="100%">
+        {% endif %}
+    </div>
+</div>
+<div class="row">
+    <div class="col s6">
+        {{ post.post_content | safe }}
+    </div>
+    <div class="col s3"> {{ post.num_of_upvotes }} </div>
+    <div class="col s3"> {{ post.num_of_downvotes }} </div>
+</div>
+<div class="row">
+    <div class="col s6">
+        {% with comments.count as total_comments %}
+        <strong class="text-secondary"><i class="far fa-comments"></i>
+            
+            {{ total_comments }}</strong>
+        {% endwith %}
+    </div>
+</div>
+<div class="row">
+    <div class="col s6">
+        <h3>Comments:</h3>
+        {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    
+                    {{ comment.body | linebreaks }}
+                </div>
+                
+                {% endfor %}
+    </div>
+</div>
+
+
 {% endblock %}

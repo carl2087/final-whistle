@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Post
 
 
@@ -11,15 +12,16 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by('created_on')
+        comments = post.comments.filter(approved=True).order_by('-created_on')
         upvoted = False
-        if post.up_votes.filter(id=self.request).exists():
+        if post.up_votes.filter(id=self.request.user.id).exists():
             upvoted = True
         downvoted = False
-        if post.down_votes.filter(id=self.request).exists():
+        if post.down_votes.filter(id=self.request.user.id).exists():
             downvoted = True
 
         return render(
@@ -30,5 +32,29 @@ class PostDetail(View):
                 'comments': comments,
                 'upvoted': upvoted,
                 'downvoted': downvoted
-            }
+            },
         )
+
+
+class PostUpvote(View):
+    def post(self, request, slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.up_votes.filter(id=request.user.id).exists():
+            post.up_votes.remove(request.user)
+        else:
+            post.up_votes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class PostDownvote(View):
+    def post(self, request, slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.down_votes.filter(id=request.user.id).exists():
+            post.down_votes.remove(request.user)
+        else:
+            post.down_votes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))

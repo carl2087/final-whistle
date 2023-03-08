@@ -109,6 +109,11 @@ body{
     object-fit: contain;
 }
 
+.vote-arrow {
+    margin-left: 0.5em !important;
+    color: #1c315e;
+}
+
 /******************************** pagination */
 
 .page-navigation {
