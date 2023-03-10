@@ -127,3 +127,21 @@ body{
     height: 250px;
     object-fit: contain;
 }
+
+/******************************** Forms */
+
+label {
+    display: none;
+}
+
+.form-but {
+    background-color: #1c315e !important;
+}
+
+.form-but:hover {
+    background-color: #227c70 !important;
+}
+
+.form-link {
+    color: #1c315e;
+}
