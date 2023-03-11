@@ -3,10 +3,11 @@
 {% block content %}
 
 <div class="row">
-    <div class="col s12 m6">
+    <div class="col s12">
         <h3 class="title-text">{{ post.title }}</h3>
         <h5 class="title-text">{{ post.author }}</h5>
     </div>
+
 </div>
 <div class="row">
     <div class="col s12 m6">
@@ -16,22 +17,16 @@
         <img class="materialboxed post-detail-img" src=" {{ post.feature_image.url }}" width="100%">
         {% endif %}
     </div>
-
-</div>
-<div class="row">
     <div class="col s12 m6">
         {{ post.post_content | safe }}
     </div>
-
-</div>
-<div class="row">
-    <div class="col s12 m6">
-        <div class="col s3"><i class="fa-solid fa-turn-up vote-arrow"></i> {{ post.num_of_upvotes }} </div>
-        <div class="col s3"><i class="fa-solid fa-turn-down vote-arrow"></i> {{ post.num_of_downvotes }} </div>
-        {% with comments.count as total_comments %}
-        <strong class="body-text"><i class="far fa-comments"></i>
-            {{ total_comments }}</strong>
-        {% endwith %}
+    <div class="col s2 comment-counts"><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></div>
+    <div class="col s2 comment-counts"><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></div>
+    <div class="col s2 comment-counts">
+    {% with comments.count as total_comments %}
+    <strong class="body-text"><i class="far fa-comments"></i>
+        {{ total_comments }}</strong>
+    {% endwith %}
     </div>
 </div>
 <div class="row">
@@ -47,7 +42,6 @@
                     </p>
                     {{ comment.comment | linebreaks }}
                 </div>
-                
         {% endfor %}
     </div>
     <div class="col s12 m6">
@@ -63,6 +57,5 @@
         {% endif %}
     </div>
 </div>
-
 
 {% endblock %}

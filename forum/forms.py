@@ -10,6 +10,3 @@ class CommentForm(forms.ModelForm):
             'comment',
             'tags',
         )
-        widgets = {
-            'tags': TagWidget(),
-        }
