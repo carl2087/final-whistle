@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'taggit',
+    'taggit_labels',
     'cloudinary',
     'django_summernote',
     'forum',

@@ -118,6 +118,10 @@ body{
     color: #1c315e;
 }
 
+.card-link {
+    color: #1c315e !important;
+}
+
 /******************************** pagination */
 
 .page-navigation {

@@ -45,6 +45,13 @@
         {% endfor %}
     </div>
     <div class="col s12 m6">
+        {% if commented %}
+        <div class="body-text">
+            <h5>Your comment is awaiting approval.</h5>
+            
+        </div>
+        {% else %}
+
         {% if user.is_authenticated %}
         <h4 class="title-text">Leave a comment:</h4>
         <p>Posting as: {{ user.username }}</p>
@@ -54,6 +61,7 @@
             <br>
             <button class="waves-effect waves-light btn form-but com-but" type="submit">Submit</button>
         </form>
+        {% endif %}
         {% endif %}
     </div>
 </div>

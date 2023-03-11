@@ -26,9 +26,9 @@
                         <p class="body-text"> {{ post.excerpt }} </p>
                     </div>
                     <div class="card-action body-text">
-                        <a href="{% url 'post_detail' post.slug %}">Full Post</a>
-                        <span><i class="fa-solid fa-turn-up vote-arrow"></i></span>
-                        <span><i class="fa-solid fa-turn-down vote-arrow"></i></span>
+                        <strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong>
+                        <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
+                        <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
                     </div>
                 </div>
             </div>
