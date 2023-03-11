@@ -3,7 +3,6 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
-from taggit.models import Tag
 
 
 class PostList(generic.ListView):
@@ -19,7 +18,6 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('-created_on')
-        common_tags = Post.tags.most_common()[:4]
         upvoted = False
         if post.up_votes.filter(id=self.request.user.id).exists():
             upvoted = True
@@ -78,7 +76,7 @@ class PostDetail(View):
 
 
 class PostUpvote(View):
-    def post(self, request, slug):
+    def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
 
         if post.up_votes.filter(id=request.user.id).exists():
@@ -90,7 +88,7 @@ class PostUpvote(View):
 
 
 class PostDownvote(View):
-    def post(self, request, slug):
+    def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
 
         if post.down_votes.filter(id=request.user.id).exists():

@@ -31,6 +31,12 @@ body{
 
 .comment-counts {
     margin-top: 1em;
+    border: none;
+    background: none;
+}
+
+.comment-counts:focus {
+    background: none !important;
 }
 
 /******************************************* navbar */
@@ -169,4 +175,12 @@ textarea {
     font-size: 14px;
     resize: none;
     font-family: 'Rubik', sans-serif;
+}
+
+.vote-clicked {
+    color: red;
+}
+
+.vote-but {
+    cursor: pointer;
 }

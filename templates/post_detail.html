@@ -20,8 +20,29 @@
     <div class="col s12 m6">
         {{ post.post_content | safe }}
     </div>
-    <div class="col s2 comment-counts"><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></div>
-    <div class="col s2 comment-counts"><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></div>
+    {% if user.is_authenticated %}
+    <strong>
+        <form action="{% url 'post_upvote' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% if upvoted %}
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-up vote-clicked"></i> {{ post.num_of_upvotes }} </button></div>
+            {% else %}
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-up"></i> {{ post.num_of_upvotes }} </button></div>
+            {% endif %}
+        </form>
+        <form action="{% url 'post_downvote' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% if downvoted %}
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-down vote-clicked"></i> {{ post.num_of_downvotes }} </button></div>
+            {% else %}
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-down"></i> {{ post.num_of_downvotes }} </button></div>
+            {% endif %}
+        </form>
+        {% else %}
+        <div class="col s2 comment-counts"><i class="fa-solid fa-turn-up vote-arrow"></i> {{ post.num_of_upvotes }} </div>
+        <div class="col s2 comment-counts"><i class="fa-solid fa-turn-down vote-arrow"></i>{{ post.num_of_downvotes }} </div>
+        {% endif %}
+    </strong>
     <div class="col s2 comment-counts">
     {% with comments.count as total_comments %}
     <strong class="body-text"><i class="far fa-comments"></i>
