@@ -142,6 +142,17 @@ body{
     object-fit: contain;
 }
 
+.comments {
+    padding: 5px;
+}
+
+.tags { 
+    background-color: #227c70;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+}
+
 /******************************** Forms */
 
 label {
