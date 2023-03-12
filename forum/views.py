@@ -2,7 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, CreatePostForm
+from django.template.defaultfilters import slugify
 from taggit.models import Tag
 
 
@@ -101,3 +102,49 @@ class PostDownvote(View):
             post.down_votes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class CreatePost(View):
+    form_class = CreatePostForm
+    initial = {'key': 'value'}
+    template_name = 'create_post.html'
+
+    def get(self, request, *args, **kwargs):
+
+        form = self.form_class(initial=self.initial)
+        return render(
+            request,
+            self.template_name,
+            {
+                'form': form,
+                'posted': False
+            }
+        )
+
+    def post(self, request, *args, **kwargs):
+
+        form = self.form_class(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.instance.author = request.user
+            form.instance.slug = slugify(form.instance.title)
+            create = form.save(commit=False)
+            create.save
+            form.save_m2m
+            return render(
+                request,
+                'create_post.html',
+                {
+                    'posted': True
+                }
+            )
+        else:
+            return render(
+                request,
+                'create_post.html',
+                {
+                    'form': form,
+                    'failed': True,
+                    'posted': False,
+                }
+            )

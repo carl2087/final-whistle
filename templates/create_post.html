@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="row s12">
+    <div class="col s12">
+        <h6 class="title-text">Posting as: {{ user.username }}</h6>
+            <form class="body-text create-post-form" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                
+                <br>
+                <button class="waves-effect waves-light btn form-but com-but" type="submit">Submit</button>
+            </form>
+    </div>
+</div>
+{% else %}
+    <div class="row">
+        <div class="col s12">
+            <h3 class="title-text"><strong>RED CARD!!</strong></h3>
+            <p class="body-text">Sign in <a class="create-post-sign-links"  href="{% url 'account_login' %}"><strong>HERE</strong></a> to create a post.</p>
+            <p class="body-text">If you don't have an account you can create one <a class="create-post-sign-links" href="{% url 'account_signup' %}"><strong>HERE</strong></a></p>
+        </div>
+    </div>
+{% endif %}
+
+{% if posted is True %}
+
+<h5>Thanks for posting</h5>
+
+{% endif %}
+
+{% endblock %}

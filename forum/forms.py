@@ -1,7 +1,5 @@
-from .models import Comment
+from .models import Comment, Post
 from django import forms
-from taggit.forms import TagField
-from taggit_labels.widgets import LabelWidget
 
 
 class CommentForm(forms.ModelForm):
@@ -9,4 +7,24 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = (
             'comment',
+        )
+
+
+class CreatePostForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+            visible.field.widget.attrs['placeholder'] = visible.field.label
+
+    class Meta:
+        model = Post
+        fields = (
+            'title',
+            'team',
+            'excerpt',
+            'feature_image',
+            'post_content',
+            'tags',
         )
