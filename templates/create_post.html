@@ -16,7 +16,7 @@
 
 {% if user.is_authenticated %}
 <div class="row s12">
-    <div class="col s12">
+    <div class="col s8 offset-s2">
         <h6 class="title-text">Posting as: {{ user.username }}</h6>
             <form enctype="multipart/form-data" class="body-text create-post-form" method="POST" name="create_post">
                 {% csrf_token %}

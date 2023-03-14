@@ -11,24 +11,30 @@
             {% for post in post_list %}
 
             <div class="col s12 m6 l3">
-                <div class="card medium  hoverable">
-                    <div class="card-image">
+                <div class="card medium hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
                         {% if "placeholder" in post.feature_image.url %}
-                        <img src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
-
-                        <h5 class="card-title title-text">{{ post.team }}</h5>
+                        <img class="activator" src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
+                        <h5 class="card-title title-text card-title-main">{{ post.team }}</h5>
+                    </div>
+                    <div>
+                        
                         {% else %}
-                        <img src=" {{ post.feature_image.url }} ">
+                        <img class="activator" src=" {{ post.feature_image.url }} ">
 
-                        <h5 class="card-title title-text">{{ post.team }}</h5>
+                        <h5 class="card-title card-title-main title-text">{{ post.team }}</h5>
                         {% endif %}
                     </div>
                     <div class="card-content">
-                        <h5 class="title-text"> {{ post.title }} </h5>
-                        <p class="body-text"> {{ post.excerpt }} </p>
+                        <span class="title-text activator card-title"> {{ post.title }} </h5></span>
+                        <p><strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong></p>
+                        <span><i class="fa-solid fa-turn-up vote-arrow card-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
+                        <span><i class="fa-solid fa-turn-down vote-arrow card-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
+                        
                     </div>
-                    <div class="card-action body-text">
-                        <strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong>
+                    <div class="card-reveal body-text">
+                        <span class="card-title grey-text text-darken-4">card<i class="material-icons right">close</i></span>
+                        <p class="body-text"> {{ post.excerpt }} </p>
                         <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
                         <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
                     </div>
