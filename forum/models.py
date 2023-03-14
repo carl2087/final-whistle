@@ -47,7 +47,6 @@ class Comment(models.Model):
     comment = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
-    tags = TaggableManager()
 
     class Meta:
         ordering = ['created_on']

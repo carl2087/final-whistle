@@ -2,11 +2,23 @@
 
 {% block content %}
 
+{% if posted is True %}
+<div class="row">
+    <div class="col s12 center-align">
+        <h2 class="title-text thanks-title">Thanks for posting, your post is awaiting approval.</h2>
+        <h3 class="body-text thanks-para">To browse some posts whilst you wait please </h3>
+        <p> <button class="waves-effect waves-light btn form-but com-but"><a class="go-home-link" href="{% url 'home' %}">click here</a></button></p>
+    </div>
+</div>
+
+
+{% else %}
+
 {% if user.is_authenticated %}
 <div class="row s12">
     <div class="col s12">
         <h6 class="title-text">Posting as: {{ user.username }}</h6>
-            <form class="body-text create-post-form" method="POST">
+            <form enctype="multipart/form-data" class="body-text create-post-form" method="POST" name="create_post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 
@@ -24,11 +36,7 @@
         </div>
     </div>
 {% endif %}
-
-{% if posted is True %}
-
-<h5>Thanks for posting</h5>
-
 {% endif %}
+
 
 {% endblock %}

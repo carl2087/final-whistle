@@ -122,15 +122,12 @@ class CreatePost(View):
         )
 
     def post(self, request, *args, **kwargs):
-
         form = self.form_class(request.POST, request.FILES)
 
         if form.is_valid():
             form.instance.author = request.user
             form.instance.slug = slugify(form.instance.title)
-            create = form.save(commit=False)
-            create.save
-            form.save_m2m
+            create = form.save()
             return render(
                 request,
                 'create_post.html',

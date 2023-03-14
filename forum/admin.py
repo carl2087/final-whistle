@@ -15,14 +15,10 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'post', 'created_on', 'approved', 'get_tags')
+    list_display = ('name', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'comment')
     actions = ['approve_comments']
-    summernote_fields = ('comment')
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
-
-    def get_tags(self, obj):
-        return ",".join(o for o in obj.tags.names())
