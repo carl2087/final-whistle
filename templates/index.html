@@ -3,7 +3,8 @@
 {% block content %}
 
 <div class="row">
-    <div class="col s12 m4 center-align"><h4 class="title-text create-post-link hoverable"><a href="{% url 'create_post' %}">Have <strong>YOUR</strong> say</a></h4></div>
+    <div class="col s6 m4 center-align"><h4 class="title-text create-post-link hoverable"><a href="{% url 'create_post' %}">Have <strong>YOUR</strong> say</a></h4></div>
+    <div class="col s6 m4 center-align"><h4 class="title-text create-post-link hoverable"><a href="{% url 'my_posts' %}">My posts</a></h4></div>
     <!-- forum entries column -->
     <div class="col s12">
         
@@ -26,14 +27,16 @@
                         {% endif %}
                     </div>
                     <div class="card-content">
-                        <span class="title-text activator card-title"> {{ post.title }} </h5></span>
+                        <span class="title-text activator card-title"> {{ post.title }} &raquo</h5></span>
+                        <span></span>
                         <p><strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong></p>
                         <span><i class="fa-solid fa-turn-up vote-arrow card-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
                         <span><i class="fa-solid fa-turn-down vote-arrow card-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
                         
                     </div>
                     <div class="card-reveal body-text">
-                        <span class="card-title grey-text text-darken-4">card<i class="material-icons right">close</i></span>
+                        <span class="card-title grey-text text-darken-4">{{ post.title }}<i class="material-icons right">close</i></span>
+                        
                         <p class="body-text"> {{ post.excerpt }} </p>
                         <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
                         <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>

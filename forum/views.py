@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, CreatePostForm
 from django.template.defaultfilters import slugify
+from django.views.generic import TemplateView
 from taggit.models import Tag
 
 
@@ -145,3 +146,61 @@ class CreatePost(View):
                     'posted': False,
                 }
             )
+
+
+# class EditPost(TemplateView):
+#     model = Post
+#     template_name = 'edit_post.html'
+
+#     def get(self, request, pk, *args, **kwargs):
+#         forum_post = Post.objects.get(pk=pk)
+#         form = CreatePostForm(instance=forum_post)
+
+#         return render(
+#             request,
+#             self.template_name,
+#             {
+#                 'form': form,
+#                 'posted': False
+#             }
+#         )
+
+#     def post(self, request, pk, *args, **kwargs):
+
+#         forum_post = Post.objects.get(pk=pk)
+#         form = CreatePostForm(request.POST, request.FILES, instance=forum_post)
+
+#         if form.is_valid():
+#             form.save()
+#             form.instance.slug = slugify(form.instance.title)
+#             form.save()
+
+#         return render(
+#                 request,
+#                 self.template_name,
+#                 {
+#                     'form': form,
+#                     'posted': True
+#                 }
+#             )
+
+
+class MyPosts(generic.ListView):
+
+    model = Post
+    template_name = 'my_posts.html'
+    paginate_by = 8
+
+    def get(self, request):
+
+        queryset = Post.objects.filter(
+            author=request.user.id).order_by('-created_on')
+        queryset_dict = {
+            'my_posts': queryset
+        }
+
+        return render(
+            request,
+            self.template_name,
+            queryset_dict,
+        )

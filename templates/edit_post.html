@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col s8 offset-s2">
+        {% if user.is_authenticated %}
+
+        {% if request.user == form.instance.author %}
+
+        {% if posted is False %}
+
+        <h1 class="title-text">Edit Recipe</h1>
+        <p class="body-text"> Editing as: {{ user.username }}</p>
+        <form enctype="multipart/form-data" class="body-text create-post-form" method="POST" name="edit_post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <br>
+            <button class="waves-effect waves-light btn form-but com-but" type="submit">Submit</button>
+        </form>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

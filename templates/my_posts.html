@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col s12">
+        {% if user.is_authenticated %}
+
+        {% for post in  my_posts %}
+        <div class="col s12 m6 l3">
+            <div class="card medium hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                    {% if "placeholder" in post.feature_image.url %}
+                    <img class="activator" src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
+                    <h5 class="card-title title-text card-title-main">{{ post.team }}</h5>
+                </div>
+                <div>
+                    
+                    {% else %}
+                    <img class="activator" src=" {{ post.feature_image.url }} ">
+
+                    <h5 class="card-title card-title-main title-text">{{ post.team }}</h5>
+                    {% endif %}
+                </div>
+                <div class="card-content">
+                    <span class="title-text activator card-title"> {{ post.title }} &raquo</h5></span>
+                    <span></span>
+                    <p><strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong></p>
+                    <span><i class="fa-solid fa-turn-up vote-arrow card-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
+                    <span><i class="fa-solid fa-turn-down vote-arrow card-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
+                    
+                </div>
+                <div class="card-reveal body-text">
+                    <span class="card-title grey-text text-darken-4">{{ post.title }}<i class="material-icons right">close</i></span>
+                    
+                    <p class="body-text"> {{ post.excerpt }} </p>
+                    <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
+                    <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
+                </div>
+            </div>
+        </div>
+
+        {% if forloop.counter|divisibleby:4 %}
+    </div>
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+        {% endif %}
+    </div>
+</div>
+{% if is_paginated %}
+        <nav aria-label="Page navigation" class="page-navigation z-depth-0">
+            <ul class="pagination">
+                
+                {% if page_obj.has_previous %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="waves-effect">
+                        &laquo; PREV
+                    </a>
+                </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}" class="waves-effect">
+                        NEXT &raquo;
+                    </a>
+                </li>
+                {% endif %}
+                
+            </ul>
+        </nav>
+        {% endif %}
+{% endblock %}
