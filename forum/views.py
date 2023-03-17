@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, STATUS
 from .forms import CommentForm, CreatePostForm
 from django.template.defaultfilters import slugify
 from django.views.generic import TemplateView
@@ -133,7 +133,7 @@ class CreatePost(View):
                 request,
                 'create_post.html',
                 {
-                    'posted': True
+                    'posted': True,
                 }
             )
         else:
@@ -148,48 +148,47 @@ class CreatePost(View):
             )
 
 
-# class EditPost(TemplateView):
-#     model = Post
-#     template_name = 'edit_post.html'
+class EditPost(TemplateView):
+    model = Post
+    template_name = 'edit_post.html'
 
-#     def get(self, request, pk, *args, **kwargs):
-#         forum_post = Post.objects.get(pk=pk)
-#         form = CreatePostForm(instance=forum_post)
+    def get(self, request, pk, *args, **kwargs):
+        forum_post = Post.objects.get(pk=pk)
+        form = CreatePostForm(instance=forum_post)
 
-#         return render(
-#             request,
-#             self.template_name,
-#             {
-#                 'form': form,
-#                 'posted': False
-#             }
-#         )
+        return render(
+            request,
+            self.template_name,
+            {
+                'form': form,
+                'posted': False
+            }
+        )
 
-#     def post(self, request, pk, *args, **kwargs):
+    def post(self, request, pk, *args, **kwargs):
 
-#         forum_post = Post.objects.get(pk=pk)
-#         form = CreatePostForm(request.POST, request.FILES, instance=forum_post)
+        forum_post = Post.objects.get(pk=pk)
+        form = CreatePostForm(request.POST, request.FILES, instance=forum_post)
 
-#         if form.is_valid():
-#             form.save()
-#             form.instance.slug = slugify(form.instance.title)
-#             form.save()
+        if form.is_valid():
+            form.save()
+            form.instance.slug = slugify(form.instance.title)
+            form.save()
 
-#         return render(
-#                 request,
-#                 self.template_name,
-#                 {
-#                     'form': form,
-#                     'posted': True
-#                 }
-#             )
+        return render(
+                request,
+                self.template_name,
+                {
+                    'form': form,
+                    'posted': True
+                }
+            )
 
 
 class MyPosts(generic.ListView):
 
     model = Post
     template_name = 'my_posts.html'
-    paginate_by = 8
 
     def get(self, request):
 

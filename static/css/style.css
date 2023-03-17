@@ -72,6 +72,11 @@ body{
     color: #1c315e;
 }
 
+.edit-post {
+    font-size: 1em;
+    color: #1c315e;
+}
+
 /******************************************* navbar */
 
 .nav-wrapper {

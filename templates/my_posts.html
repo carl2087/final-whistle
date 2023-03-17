@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col s12">
         {% if user.is_authenticated %}
-
+        <div class="row">
         {% for post in  my_posts %}
         <div class="col s12 m6 l3">
             <div class="card medium hoverable">
@@ -37,7 +37,10 @@
                     <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
                     <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
                 </div>
+                
             </div>
+            <div class="col s6"><a class="edit-post body-text" href="{% url 'edit_post' post.id %}"><strong>Edit Post</strong></a></div>
+            
         </div>
 
         {% if forloop.counter|divisibleby:4 %}
@@ -47,29 +50,11 @@
         {% endfor %}
     </div>
 </div>
-        {% endif %}
+
+        
     </div>
 </div>
-{% if is_paginated %}
-        <nav aria-label="Page navigation" class="page-navigation z-depth-0">
-            <ul class="pagination">
-                
-                {% if page_obj.has_previous %}
-                <li>
-                    <a href="?page={{ page_obj.previous_page_number }}" class="waves-effect">
-                        &laquo; PREV
-                    </a>
-                </li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li>
-                    <a href="?page={{ page_obj.next_page_number }}" class="waves-effect">
-                        NEXT &raquo;
-                    </a>
-                </li>
-                {% endif %}
-                
-            </ul>
-        </nav>
-        {% endif %}
+
+{% endif %}
 {% endblock %}
+
