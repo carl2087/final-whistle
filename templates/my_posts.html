@@ -6,55 +6,77 @@
     <div class="col s12">
         {% if user.is_authenticated %}
         <div class="row">
-        {% for post in  my_posts %}
-        <div class="col s12 m6 l3">
-            <div class="card medium hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                    {% if "placeholder" in post.feature_image.url %}
-                    <img class="activator" src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
-                    <h5 class="card-title title-text card-title-main">{{ post.team }}</h5>
-                </div>
-                <div>
-                    
-                    {% else %}
-                    <img class="activator" src=" {{ post.feature_image.url }} ">
+            {% for post in  my_posts %}
+            <div class="col s12 m6 l3">
+                <div class="card medium hoverable">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        {% if "placeholder" in post.feature_image.url %}
+                        <img class="activator"
+                            src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
+                        <h5 class="card-title title-text card-title-main">{{ post.team }}</h5>
+                    </div>
+                    <div>
 
-                    <h5 class="card-title card-title-main title-text">{{ post.team }}</h5>
-                    {% endif %}
+                        {% else %}
+                        <img class="activator" src=" {{ post.feature_image.url }} ">
+
+                        <h5 class="card-title card-title-main title-text">{{ post.team }}</h5>
+                        {% endif %}
+                    </div>
+                    <div class="card-content">
+                        <span class="title-text activator card-title"> {{ post.title }} &raquo</h5></span>
+                        <span></span>
+                        <p><strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong>
+                        </p>
+                        <span><i class="fa-solid fa-turn-up vote-arrow card-arrow"></i><strong>
+                                {{ post.num_of_upvotes }} </strong></span>
+                        <span><i class="fa-solid fa-turn-down vote-arrow card-arrow"></i><strong>
+                                {{ post.num_of_downvotes }} </strong></span>
+
+                    </div>
+                    <div class="card-reveal body-text">
+                        <span class="card-title grey-text text-darken-4">{{ post.title }}<i
+                                class="material-icons right">close</i></span>
+
+                        <p class="body-text"> {{ post.excerpt }} </p>
+                        <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }}
+                            </strong></span>
+                        <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }}
+                            </strong></span>
+                    </div>
+
                 </div>
-                <div class="card-content">
-                    <span class="title-text activator card-title"> {{ post.title }} &raquo</h5></span>
-                    <span></span>
-                    <p><strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong></p>
-                    <span><i class="fa-solid fa-turn-up vote-arrow card-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
-                    <span><i class="fa-solid fa-turn-down vote-arrow card-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
-                    
+                <div class="col s6"><a class="edit-post body-text" href="{% url 'edit_post' post.id %}"><strong>Edit
+                            Post</strong></a></div>
+
+                <!-- Modal Trigger -->
+                <div class="col s6"><a class="edit-post body-text delete-post modal-trigger"
+                        href="#modal1"><strong>Delete Post</strong></a></div>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4 class="title-text">Are you sure you want to delete your post?</h4>
+                        <strong>
+                            <p class="body-text">This cannot be reversed!</p>
+                        </strong>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="{% url 'delete_post' post.id %}" class="modal-close waves-effect waves-green btn-flat">Delete post</a>
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel delete</a>
+                    </div>
                 </div>
-                <div class="card-reveal body-text">
-                    <span class="card-title grey-text text-darken-4">{{ post.title }}<i class="material-icons right">close</i></span>
-                    
-                    <p class="body-text"> {{ post.excerpt }} </p>
-                    <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }} </strong></span>
-                    <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }} </strong></span>
-                </div>
-                
             </div>
-            <div class="col s6"><a class="edit-post body-text" href="{% url 'edit_post' post.id %}"><strong>Edit Post</strong></a></div>
-            
+
+            {% if forloop.counter|divisibleby:4 %}
         </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 
-        {% if forloop.counter|divisibleby:4 %}
-    </div>
-    <div class="row">
-        {% endif %}
-        {% endfor %}
-    </div>
 </div>
-
-        
-    </div>
-</div>
-
 {% endif %}
-{% endblock %}
 
+{% endblock %}

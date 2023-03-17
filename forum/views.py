@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, STATUS
@@ -171,7 +171,6 @@ class EditPost(TemplateView):
         form = CreatePostForm(request.POST, request.FILES, instance=forum_post)
 
         if form.is_valid():
-            form.save()
             form.instance.slug = slugify(form.instance.title)
             form.save()
 
@@ -203,3 +202,13 @@ class MyPosts(generic.ListView):
             self.template_name,
             queryset_dict,
         )
+
+
+class DeletePost(View):
+
+    def get(self, request, pk, *args, **kwargs):
+
+        post = get_object_or_404(Post, pk=pk)
+        post.delete()
+
+        return redirect(reverse('my_posts'))
