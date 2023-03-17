@@ -166,7 +166,6 @@ class EditPost(TemplateView):
         )
 
     def post(self, request, pk, *args, **kwargs):
-
         forum_post = Post.objects.get(pk=pk)
         form = CreatePostForm(request.POST, request.FILES, instance=forum_post)
 
@@ -174,7 +173,7 @@ class EditPost(TemplateView):
             form.instance.slug = slugify(form.instance.title)
             form.save()
 
-        return render(
+            return render(
                 request,
                 self.template_name,
                 {
@@ -183,11 +182,23 @@ class EditPost(TemplateView):
                 }
             )
 
+        else:
+            return render(
+                request,
+                self.template_name,
+                {
+                    'form': form,
+                    'failed': True,
+                    'posted': False,
+                }
+            )
+
 
 class MyPosts(generic.ListView):
 
     model = Post
     template_name = 'my_posts.html'
+    paginate_by = 8
 
     def get(self, request):
 

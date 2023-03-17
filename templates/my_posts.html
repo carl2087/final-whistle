@@ -12,21 +12,24 @@
                     <div class="card-image waves-effect waves-block waves-light">
                         {% if "placeholder" in post.feature_image.url %}
                         <img class="activator"
-                            src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
+                            src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg"
+                            alt="Three footballs on a pitch.">
                         <h5 class="card-title title-text card-title-main">{{ post.team }}</h5>
                     </div>
                     <div>
 
                         {% else %}
-                        <img class="activator" src=" {{ post.feature_image.url }} ">
+                        <img class="activator" src=" {{ post.feature_image.url }} " alt="{{  post.title }}">
 
                         <h5 class="card-title card-title-main title-text">{{ post.team }}</h5>
                         {% endif %}
                     </div>
                     <div class="card-content">
-                        <span class="title-text activator card-title"> {{ post.title }} &raquo</h5></span>
+                        <span class="title-text activator card-title flow-text">
+                            {{ post.title }} &raquo</span>
                         <span></span>
-                        <p><strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong>
+                        <p>
+                            <strong><a class="card-link" href="{% url 'post_detail' post.slug %}">Full Post</a></strong>
                         </p>
                         <span><i class="fa-solid fa-turn-up vote-arrow card-arrow"></i><strong>
                                 {{ post.num_of_upvotes }} </strong></span>
@@ -62,7 +65,8 @@
                         </strong>
                     </div>
                     <div class="modal-footer">
-                        <a href="{% url 'delete_post' post.id %}" class="modal-close waves-effect waves-green btn-flat">Delete post</a>
+                        <a href="{% url 'delete_post' post.id %}"
+                            class="modal-close waves-effect waves-green btn-flat">Delete post</a>
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel delete</a>
                     </div>
                 </div>
@@ -75,8 +79,17 @@
             {% endfor %}
         </div>
     </div>
-
 </div>
-{% endif %}
+    {% else %}
+</div>
+<div class="row">
+    <div class="col s12">
+        <h3 class="title-text"><strong>RED CARD!!</strong></h3>
+        <p class="body-text">Sign in <a class="create-post-sign-links"  href="{% url 'account_login' %}"><strong>HERE</strong></a> to see your posts.</p>
+        <p class="body-text">If you don't have an account you can create one <a class="create-post-sign-links" href="{% url 'account_signup' %}"><strong>HERE</strong></a></p>
+    </div>
+</div>
+</div>
 
+{% endif %}
 {% endblock %}

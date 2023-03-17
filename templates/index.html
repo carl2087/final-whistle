@@ -7,7 +7,7 @@
     <div class="col s6 m4 center-align"><h4 class="title-text create-post-link hoverable flow-text"><a href="{% url 'my_posts' %}">My posts</a></h4></div>
     <!-- forum entries column -->
     <div class="col s12">
-        
+        <hr>
         <div class="row">
             {% for post in post_list %}
 
@@ -15,13 +15,13 @@
                 <div class="card medium hoverable">
                     <div class="card-image waves-effect waves-block waves-light">
                         {% if "placeholder" in post.feature_image.url %}
-                        <img class="activator" src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg">
+                        <img class="activator" src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg" alt="Three footballs on a pitch">
                         <h5 class="card-title title-text card-title-main flow-text">{{ post.team }}</h5>
                     </div>
                     <div>
                         
                         {% else %}
-                        <img class="activator" src=" {{ post.feature_image.url }} ">
+                        <img class="activator" src=" {{ post.feature_image.url }} " alt="{{ post.title }}">
 
                         <h5 class="card-title card-title-main title-text flow-text">{{ post.team }}</h5>
                         {% endif %}

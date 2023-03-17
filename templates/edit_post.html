@@ -6,24 +6,34 @@
     <div class="col s8 offset-s2">
         {% if user.is_authenticated %}
 
-        {% if request.user == form.instance.author %}
+            {% if request.user == form.instance.author %}
 
-        {% if posted is False %}
+                {% if posted is False %}
 
-        <h1 class="title-text">Edit Post</h1>
-        <p class="body-text"> Editing as: {{ user.username }}</p>
-        <form enctype="multipart/form-data" class="body-text create-post-form" method="POST" name="edit_post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            
-            <br>
-            <button class="waves-effect waves-light btn form-but com-but" type="submit">Submit</button>
-        </form>
+                    <h1 class="title-text edit-post-title">Edit Post</h1>
+                    <p class="body-text"> Editing as: {{ user.username }}</p>
+                    <form enctype="multipart/form-data" class="body-text create-post-form" method="POST" name="edit_post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        
+                        <br>
+                        <button class="waves-effect waves-light btn form-but com-but body-text" type="submit">Submit</button>
+                        <button class="waves-effect waves-light btn form-but com-but body-text"><a href="{% url 'my_posts' %}">Cancel</a></button>
+                    </form>
+
+                    {% if failed %}
+                        <p class="fail-text body-text">
+                            <strong>
+                            Unfortunately your post edit form failed to submit. Please check all required fields are
+                            correctly filled in and try again.
+                            </strong>
+                        </p>
+                    {% endif %}
+
     </div>
     {% endif %}
     {% endif %}
     {% endif %}
-    
 </div>
 
 {% endblock %}
