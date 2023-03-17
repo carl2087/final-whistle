@@ -14,14 +14,14 @@
                         <img class="activator"
                             src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg"
                             alt="Three footballs on a pitch.">
-                        <h5 class="card-title title-text card-title-main">{{ post.team }}</h5>
+                        <h5 class="card-title title-text card-title-main activator">{{ post.team }}</h5>
                     </div>
                     <div>
 
                         {% else %}
                         <img class="activator" src=" {{ post.feature_image.url }} " alt="{{  post.title }}">
 
-                        <h5 class="card-title card-title-main title-text">{{ post.team }}</h5>
+                        <h5 class="card-title card-title-main title-text activator">{{ post.team }}</h5>
                         {% endif %}
                     </div>
                     <div class="card-content">
