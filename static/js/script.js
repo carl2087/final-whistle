@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Modal initialization
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems);
+
+// times out the message alerts
+
+    setTimeout(function () {
+        $('#message-alert').fadeOut('fast');
+    }, 2000)
 });
 
 // adds correct year to copyright in footer

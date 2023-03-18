@@ -289,3 +289,12 @@ a {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
+
+/******************************** Message alerts */
+
+.alert {
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
