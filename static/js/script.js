@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
         $('#message-alert').fadeOut('fast');
-    },2000)
+    },2000);
 
 
 
@@ -32,7 +32,7 @@ let myButton = document.getElementById("top-button");
 // When the user scrolls down 600px from the top of the document, show the button
 // set at 600px as only needed on mobile devices
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction();};
 
 function scrollFunction() {
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
