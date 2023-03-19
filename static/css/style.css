@@ -219,6 +219,10 @@ body{
     color: #1c315e !important;
 }
 
+.post-content {
+    margin-top: 20px;
+}
+
 /******************************** Forms */
 
 label {
