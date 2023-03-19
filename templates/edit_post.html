@@ -32,9 +32,18 @@
                     {% endif %}
 
     </div>
-    {% endif %}
-    {% endif %}
-    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+        {% if posted is True %}
+        
+            <div class="col s12">
+                <p class="body-text flow-text">Your post has been edited succesfully!</p>
+                <p class="body-text flow-text">To go back to the homepage please click <a class="edit-post-links" href="{% url 'home' %}"><strong>HERE</strong></a> or to go back to your posts
+                please click <a class="edit-post-links" href="{% url 'my_posts' %}"><strong>HERE.</strong></a></p>
+            </div>
+        </div>
+        {% endif %}
 </div>
 
 {% endblock %}

@@ -284,10 +284,8 @@ textarea {
     color: black !important;
 }
 
-a {
-    color: #1c315e;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
+.edit-post-links {
+    color: #1c315e !important;
 }
 
 /******************************** Message alerts */
@@ -322,8 +320,4 @@ a {
     right: 30px;
     z-index: 99;
     color: white;
-}
-
-.error-link {
-    color: #1c315e !important;
 }
