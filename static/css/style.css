@@ -199,11 +199,6 @@ body{
 
 /******************************** post detail */
 
-.post-detail-img {
-    height: 250px;
-    object-fit: contain;
-}
-
 .comments {
     padding: 5px;
 }

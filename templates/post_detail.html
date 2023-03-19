@@ -14,14 +14,16 @@
 <div class="row">
     <div class="col s12 m6">
         {% if "placeholder" in post.feature_image.url %}
-        <img class="materialboxed post-detail-img" src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg" width="100%">
+        <img class="materialboxed responsive-img" width="300"
+            src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1678024895/images-the-final-whistle/football-on-pitch_urfmwe.jpg"
+            alt="Three footballs on pitch">
         {% else %}
-        <img class="materialboxed post-detail-img" src=" {{ post.feature_image.url }}" width="100%">
+        <img class="materialboxed post-detail-img responsive-img" width="200" src=" {{ post.feature_image.url }}" alt="{{ post.title }}">
         {% endif %}
         <!-- displays tags on post  -->
         <h6>Tags:</h6>
         {% for tag in post.tags.all %}
-            <span class="tags body-text">{{ tag }}</span>
+        <span class="tags body-text">{{ tag }}</span>
         {% endfor %}
     </div>
     <div class="col s12 m6 post-content body-text">
@@ -30,7 +32,8 @@
     <div class="col s2 comment-counts">
         {% with comments.count as total_comments %}
         <strong class="body-text"><i class="far fa-comments"></i>
-            {{ total_comments }}</strong>
+            {{ total_comments }}
+        </strong>
         {% endwith %}
     </div>
     <!-- is user is logged in they can leave an upvote or downvote -->
@@ -39,52 +42,66 @@
         <form action="{% url 'post_upvote' post.slug %}" method="POST">
             {% csrf_token %}
             {% if upvoted %}
-            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-up vote-clicked"></i> {{ post.num_of_upvotes }} </button></div>
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}"
+                    class="comment-counts vote-but"><i class="fa-solid fa-turn-up vote-clicked"></i>
+                    {{ post.num_of_upvotes }} </button></div>
             {% else %}
-            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-up"></i> {{ post.num_of_upvotes }} </button></div>
-            {% endif %}
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}"
+                    class="comment-counts vote-but"><i class="fa-solid fa-turn-up"></i> {{ post.num_of_upvotes }}
+                </button></div>
+
         </form>
+    </strong>
+    {% endif %}
+    <strong>
         <form action="{% url 'post_downvote' post.slug %}" method="POST">
             {% csrf_token %}
             {% if downvoted %}
-            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-down vote-clicked"></i> {{ post.num_of_downvotes }} </button></div>
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}"
+                    class="comment-counts vote-but"><i class="fa-solid fa-turn-down vote-clicked"></i>
+                    {{ post.num_of_downvotes }} </button></div>
             {% else %}
-            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}" class="comment-counts vote-but"><i class="fa-solid fa-turn-down"></i> {{ post.num_of_downvotes }} </button></div>
-            {% endif %}
-        </form>
-        {% else %}
-        <div class="col s2 comment-counts"><i class="fa-solid fa-turn-up vote-arrow"></i> {{ post.num_of_upvotes }} </div>
-        <div class="col s2 comment-counts"><i class="fa-solid fa-turn-down vote-arrow"></i>{{ post.num_of_downvotes }} </div>
-        {% endif %}
+            <div class="col s2"><button type="submit" name="forumpost_id" value="{{post.slug}}"
+                    class="comment-counts vote-but"><i class="fa-solid fa-turn-down"></i> {{ post.num_of_downvotes }}
+                </button></div>
     </strong>
+    {% endif %}
+    </form>
+    {% else %}
+
+    <div class="col s2 comment-counts"><i class="fa-solid fa-turn-up vote-arrow"></i> {{ post.num_of_upvotes }} </div>
+    <div class="col s2 comment-counts"><i class="fa-solid fa-turn-down vote-arrow"></i>{{ post.num_of_downvotes }}
+    </div>
+
+    {% endif %}
 </div>
 <!-- displays comments underneath the post  -->
 <div class="row">
     <div class="col s12 m6">
         <h4 class="title-text">Comments:</h4>
         {% for comment in comments %}
-                <div class="body-text comments">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.comment | linebreaks }}
+        <div class="body-text comments">
+            <p class="font-weight-bold">
+                {{ comment.name }}
+                <span class=" text-muted font-weight-normal">
+                    {{ comment.created_on }}
+                </span> wrote:
+            </p>
+            {{ comment.comment | linebreaks }}
 
-                    <hr>
-                </div>
+            <hr>
+        </div>
         {% endfor %}
-        
+
     </div>
     <div class="col s12 m6">
         {% if commented %}
         <div class="body-text">
             <h5>Your comment is awaiting approval.</h5>
-            
+
         </div>
         {% else %}
-    <!-- is user is logged in they can leave a comment if not they are asked to login -->
+        <!-- is user is logged in they can leave a comment if not they are asked to login -->
         {% if user.is_authenticated %}
         <h4 class="title-text">Leave a comment:</h4>
         <p>Posting as: {{ user.username }}</p>
@@ -95,7 +112,8 @@
             <button class="waves-effect waves-light btn form-but com-but" type="submit">Submit</button>
         </form>
         {% else %}
-        <h5 class="title-text">To leave a comment please login <strong><a class="comment-link" href="{% url 'account_login' %}">HERE.</a></strong></h5>
+        <h5 class="title-text">To leave a comment please login <strong><a class="comment-link"
+                    href="{% url 'account_login' %}">HERE.</a></strong></h5>
         {% endif %}
         {% endif %}
     </div>
