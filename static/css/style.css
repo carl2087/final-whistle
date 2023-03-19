@@ -323,3 +323,7 @@ a {
     z-index: 99;
     color: white;
 }
+
+.error-link {
+    color: #1c315e !important;
+}
