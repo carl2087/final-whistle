@@ -9,6 +9,7 @@ from django.views.generic import TemplateView
 from taggit.models import Tag
 
 
+# displays all posts on the index screen
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -16,6 +17,7 @@ class PostList(generic.ListView):
     paginate_by = 8
 
 
+# displays the posts on their own page on the site
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -106,6 +108,7 @@ class PostDownvote(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+# allows a user to create their own posts
 class CreatePost(View):
     form_class = CreatePostForm
     initial = {'key': 'value'}
@@ -149,6 +152,7 @@ class CreatePost(View):
             )
 
 
+# allows a user to edit their posts
 class EditPost(TemplateView):
     model = Post
     template_name = 'edit_post.html'
@@ -195,6 +199,7 @@ class EditPost(TemplateView):
             )
 
 
+# displays the user their own posts
 class MyPosts(generic.ListView):
 
     model = Post
@@ -216,6 +221,7 @@ class MyPosts(generic.ListView):
         )
 
 
+# allows user to delete their own posts
 class DeletePost(View):
 
     def get(self, request, pk, *args, **kwargs):

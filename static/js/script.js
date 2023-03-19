@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
         $('#message-alert').fadeOut('fast');
-    }, 2000)
+    },2000)
 });
 
 // adds correct year to copyright in footer

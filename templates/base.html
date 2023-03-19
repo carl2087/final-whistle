@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+    <!-- navbar  -->
     <nav class="head-nav">
         <div class="nav-wrapper">
             <a href="{% url 'home' %}" class="brand-logo"><img src="https://res.cloudinary.com/ddkb2afxq/image/upload/v1677874826/images-the-final-whistle/whistle-icon_ltdl1k.png" alt="Final whistle logo"></a>
@@ -35,7 +35,7 @@
             </ul>
         </div>
     </nav>
-
+    <!-- updates navbar when logged in  -->
     <ul class="sidenav title-text" id="mobile-demo">
         <li><a href="{% url 'home' %}">Home</a></li>
         {% if user.is_authenticated %}
@@ -45,8 +45,9 @@
         <li><a href="{% url 'account_signup' %}">Register</a></li>
         {% endif %}
     </ul>
-    <div class="row">
-        <div class="col s8 offset-s2">
+    <!-- alert messages -->
+    <div class="row ">
+        <div class="col s8 offset-s2 alert-div">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -57,13 +58,12 @@
         </div>
     </div>
     <div class="container">
-        
         {% block content %}
         <!-- content goes here -->
         {% endblock content %}
 
     </div>
-
+    <!-- footer  -->
     <footer class="page-footer">
         <div class="container">
             <div class="row no-margin-bottom">
@@ -90,7 +90,7 @@
             </div>
         </div>
     </footer>
-
+    <!-- materialize js and custom js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
 

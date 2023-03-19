@@ -65,7 +65,7 @@ LOGOUT_REDIRECT_URL = '/'
 MESSAGE_TAGS = {
     messages.DEBUG: 'amber lighten-1 body-text alert',
     messages.INFO: 'lime body-text alert',
-    messages.SUCCESS: 'teal darken-4 body-text alert',
+    messages.SUCCESS: 'teal lighten-1 body-text alert',
     messages.WARNING: 'pink accent-3 body-text alert',
     messages.ERROR: 'red accent-4 body-text alert',
 }

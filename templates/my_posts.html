@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<!-- is user is logged in will show them their own posts  -->
 <div class="row">
     <div class="col s12">
         {% if user.is_authenticated %}
@@ -40,18 +41,18 @@
                     <div class="card-reveal body-text">
                         <span class="card-title grey-text text-darken-4">{{ post.title }}<i
                                 class="material-icons right">close</i></span>
-
                         <p class="body-text"> {{ post.excerpt }} </p>
                         <span><i class="fa-solid fa-turn-up vote-arrow"></i><strong> {{ post.num_of_upvotes }}
                             </strong></span>
                         <span><i class="fa-solid fa-turn-down vote-arrow"></i><strong> {{ post.num_of_downvotes }}
                             </strong></span>
                     </div>
-
                 </div>
+                <!-- takes user to an edit post page  -->
                 <div class="col s6"><a class="edit-post body-text" href="{% url 'edit_post' post.id %}"><strong>Edit
                             Post</strong></a></div>
 
+                <!-- modal appears when user wants to delete a post  -->
                 <!-- Modal Trigger -->
                 <div class="col s6"><a class="edit-post body-text delete-post modal-trigger"
                         href="#modal1"><strong>Delete Post</strong></a></div>
@@ -82,6 +83,7 @@
 </div>
     {% else %}
 </div>
+<!-- if not logged in then user will be asked to login or sign up for an account  -->
 <div class="row">
     <div class="col s12">
         <h3 class="title-text"><strong>RED CARD!!</strong></h3>

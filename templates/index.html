@@ -3,11 +3,13 @@
 {% block content %}
 
 <div class="row">
+    <!-- links to my posts and create a post page  -->
     <div class="col s6 m4 center-align"><h4 class="title-text create-post-link hoverable flow-text"><a href="{% url 'create_post' %}">Have <strong>YOUR</strong> say</a></h4></div>
     <div class="col s6 m4 center-align"><h4 class="title-text create-post-link hoverable flow-text"><a href="{% url 'my_posts' %}">My posts</a></h4></div>
     <!-- forum entries column -->
     <div class="col s12">
         <hr>
+        <!-- displays all of the posts to the user  -->
         <div class="row">
             {% for post in post_list %}
 
