@@ -215,6 +215,10 @@ body{
     border-radius: 10px;
 }
 
+.comment-link {
+    color: #1c315e !important;
+}
+
 /******************************** Forms */
 
 label {
