@@ -6,7 +6,8 @@ from .models import Post, Comment
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
-    list_display = ('title', 'slug', 'status', 'team', 'created_on', 'get_tags')
+    list_display = (
+        'title', 'slug', 'status', 'team', 'created_on', 'get_tags')
     search_fields = ('title', 'post_content', 'team', 'tags')
 
     def get_tags(self, obj):
