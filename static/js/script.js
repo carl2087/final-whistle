@@ -11,11 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems);
 
-    // times out the message alerts
-    setTimeout(function () {
-        let alert = document.getElementById('message-alert');
-        fadeOut(alert);
-    })
+    // Adds class to alerts to hide them from user
+    let alert = document.getElementById("message-alert");
+    alert.classList.add('visibility-hidden')
 
     // adds correct year to copyright in footer
     let date = (new Date().getFullYear());
@@ -45,21 +43,4 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}
-
-// function for fading out the alerts
-// researched code on stack overflow and codepen
-
-function fadeOut(fadeTarget) {
-    let fadeEffect = setInterval(function() {
-        if (!fadeTarget.style.opacity) {
-            fadeTarget.style.opacity = 1;
-        }
-        if (fadeTarget.style.opacity > 0) {
-            fadeTarget.style.opacity -= 0.01;
-        } else {
-            clearInterval(fadeEffect);
-        }
-    }, 40);
-    
 }
