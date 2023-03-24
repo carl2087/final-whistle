@@ -34,23 +34,47 @@ customise the created posts with an image.
 
 ## Site owner
 
-The goal for the site owner is to provide a stable user experience that is enjoyable to encourage user interaction. The site should be accessible and appealing to new users, it should also be scaleable with an easy way to add more features in the future. Content on the site should be easily moderated to ensure community standards are met and be of high quality. The GitHub project board had a to do section where user stories where first placed, an in progress tab where user stories where moved to when being worked on, a done section where the stories where moved when completed. A bugs tab for any coding problems that arose during the process and a won't-have section for features that where not included in this stage of the project.
+The goal for the site owner is to provide a stable user experience that is enjoyable to encourage user interaction. The site should be accessible and appealing to new users, it should also be scaleable with an easy way to add more features in the future. Content on the site should be easily moderated to ensure community standards are met and be of high quality. 
 
 <br>
 
-[Back to top](#table-of-contents)
+[Table of contents](#table-of-contents)
 
 # Project management
 
-I managed this project using an [Agile](https://agilemanifesto.org/) methodology. I used GitHub projects to refine epic tasks to break them down into user stories. This ensured that tracking and organising the project into iterations was manageable. 
-
 ## Agile development
 
-## GitHub stories
+I managed this project using an [Agile](https://agilemanifesto.org/) methodology. I used GitHub projects to refine epic tasks to break them down into user stories. This ensured that tracking and organising the project into iterations was manageable. The GitHub project board had a to do section where user stories where first placed, an in progress tab where user stories where moved to when being worked on, a done section where the stories where moved when completed. A bugs tab for any coding problems that arose during the process and a won't-have section for features that where not included in this stage of the project.
+
+[The Final Whistle user stories](https://github.com/users/carl2087/projects/7)
+
+I also used GitHub projects to organise my project tasks in the same way this included tasks such as creating wireframes, choosing the colour theme for the site and writing the readme document.
+
+[The Final Whistle project tasks](https://github.com/users/carl2087/projects/8)
+
+
+## GitHub stories images
+
+![User stories the final whistle](./assets/readme-images/user-stories.png) 
+![Project tasks the final whistle](./assets/readme-images/project-tasks.png)
+
 
 ## Database schema
 
+I drew the database schemas up in Microsoft Excel &copy; The shema diagrams where used to plan the database models, fields and also the relationships between the models and how they would interact with each other. The Final Whistle consists of two models one for comments and one for posts. There is an oppurttunity to create a third model for the football teams in a future release of the site.
+
+![Database schema comment model](./assets/wireframes/comment-model-diagram.png)
+![Database schema post model](./assets/wireframes/post-model-diagram.png)
+
+<br>
+
+[Table of contents](#table-of-contents)
+
+
 # User experience
+
+When planning the site and how it would affect the user experince is first created wireframes for the project to decide on the layout of each page.
+I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme for the site. I used Google &copy; fonts to decide on which fonts I would use for the site. I have included images below relating to the steps I undertook.
 
 ## Wireframes
 
