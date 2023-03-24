@@ -38,7 +38,7 @@ The goal for the site owner is to provide a stable user experience that is enjoy
 
 <br>
 
-[Table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 # Project management
 
@@ -68,7 +68,7 @@ I drew the database schemas up in Microsoft Excel &copy; The shema diagrams wher
 
 <br>
 
-[Table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 
 # User experience
@@ -86,7 +86,7 @@ I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme fo
 ### Home page for tablet
 <br>
 
-![Home page tablet](./assets/wireframes/land-page-tab.png)
+![Home page tablet](./assets/wireframes/home-page-tab.png)
 
 ### Home page for mobile phone
 <br>

@@ -43,10 +43,3 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-// Hides the alert messages provided by Django
-
-setTimeout(function() {
-    let alert = document.getElementById("alert-div");
-    alert.classList.add('visibility-hidden');
-});

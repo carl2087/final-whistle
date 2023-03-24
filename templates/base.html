@@ -47,11 +47,11 @@
     </ul>
     <!-- alert messages -->
     <div class="row ">
-        <div class="col s8 offset-s2 " id="alert-div">
+        <div class="col s8 offset-s2 ">
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
-                <li {% if message.tags %} id="message-alert" class="{{ message.tags }} scale-out"{% endif %}>{{ message }}</li>
+                <li {% if message.tags %} id="visibility-hidden" class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                 {% endfor %}
             </ul>
             {% endif %}
@@ -95,7 +95,6 @@
     <!-- materialize js and custom js  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{% static 'js/script.js' %}"></script>
-
 
 </body>
 </html>

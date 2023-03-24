@@ -315,7 +315,7 @@ textarea {
     width: fit-content;
 }
 
-.visibility-hidden {
+#visibility-hidden {
     visibility: hidden;
     opacity: 0;
     transition: visibility 2s 4s, opacity 4s linear;
