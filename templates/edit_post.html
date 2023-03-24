@@ -18,7 +18,29 @@
                         {{ form.as_p }}
                         <br>
                         <button class="waves-effect waves-light btn form-but com-but body-text" type="submit">Submit</button>
-                        <button class="waves-effect waves-light btn form-but com-but body-text"><a href="{% url 'my_posts' %}">Cancel</a></button>
+                        <button class="waves-effect waves-light btn form-but com-but body-text ">
+                            <a
+                                class="  modal-trigger"
+                                href="#modal1"><strong>Cancel</strong>
+                            </a>
+                        </button>
+                        <!-- modal appears when user wants to cancel editing a post -->
+                        <!-- Modal Trigger -->
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                <h4 class="title-text">Are you sure you want to cancel editing your post?</h4>
+                                <strong>
+                                    <p class="body-text">Any progres you've made so far will be lost!</p>
+                                </strong>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{% url 'my_posts' %}"
+                                    class="modal-close waves-effect waves-green btn-flat">Cancel editing</a>
+                                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Keep on editing</a>
+                            </div>
+                        </div>
                     </form>
 
                         <!-- displays if post edit failed  -->

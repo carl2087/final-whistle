@@ -226,6 +226,7 @@ label {
 
 .form-but {
     background-color: #1c315e !important;
+    margin-bottom: 30px;
 }
 
 .form-but:hover {
