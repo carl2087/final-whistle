@@ -51,7 +51,7 @@
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
-                <li {% if message.tags %} id="visibility-hidden" class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                <li {% if message.tags %} id="alert-message" class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                 {% endfor %}
             </ul>
             {% endif %}
