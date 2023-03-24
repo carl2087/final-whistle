@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems);
 
-
-
-
     // adds correct year to copyright in footer
     let date = (new Date().getFullYear());
     document.getElementById("copyright").innerHTML = date;
