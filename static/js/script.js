@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems);
 
-    // Adds class to alerts to hide them from user
-    let alert = document.getElementById("message-alert");
-    alert.classList.add('visibility-hidden')
+
+
 
     // adds correct year to copyright in footer
     let date = (new Date().getFullYear());
@@ -44,3 +43,10 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// Hides the alert messages provided by Django
+
+setTimeout(function() {
+    let alert = document.getElementById("alert-div");
+    alert.classList.add('visibility-hidden');
+});

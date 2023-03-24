@@ -76,9 +76,78 @@ I drew the database schemas up in Microsoft Excel &copy; The shema diagrams wher
 When planning the site and how it would affect the user experince is first created wireframes for the project to decide on the layout of each page.
 I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme for the site. I used Google &copy; fonts to decide on which fonts I would use for the site. I have included images below relating to the steps I undertook.
 
-## Wireframes
+## Wireframe images
+
+### Home page for desktop
+<br>
+
+![Home page desktop](./assets/wireframes/home-page.png)
+
+### Home page for tablet
+<br>
+
+![Home page tablet](./assets/wireframes/land-page-tab.png)
+
+### Home page for mobile phone
+<br>
+
+![Home page mobile](./assets/wireframes/home-page-mob.png)
+
+### Create a post page 
+<br>
+
+![Create a post page](./assets/wireframes/create-post.png)
+
+### Create a post page tablet 
+<br>
+
+![Create a post page tablet](./assets/wireframes/create-post-tab.png)
+
+### Create a post page mobile phone
+<br>
+
+![Create a post page mobile](./assets/wireframes/create-post-mob.png)
+
+### Comment page 
+<br>
+
+![Create a comment page](./assets/wireframes/comment-on-a-post.png)
+
+### Comment page tablet
+<br>
+
+![Create a comment page tablet](./assets/wireframes/comment-on-a-post-tablet.png)
+
+### Comment page mobile phone
+<br>
+
+![Create a comment page mobile](./assets/wireframes/comment-on-a-post-mobile.png)
+
+### Login and user register pages
+<br>
+
+![Log in page](./assets/wireframes/log-page.png)
+![Register page](./assets/wireframes/reg-page.png)
+
+### Login and user register pages
+<br>
+
+![Log in page tablet](./assets/wireframes/log-page-tab.png)
+![Register page tablet](./assets/wireframes/reg-page-tab.png)
+
+### Login and user register pages
+<br>
+
+![Log in page mobile](./assets/wireframes/log-page-mob.png)
+![Register page mobile](./assets/wireframes/reg-page-mob.png)
+
 
 ## Colour sheme
+
+I used [Color Hunt](https://colorhunt.co/) to select the colour scheme for the site I find it a useful site as it has a random generator button so you can see a lot of different colour schemes quickly. I decided to use the colour palette below as the colours are not to bright and work well together.
+
+![Color hunt colour palette](./assets/wireframes/color-hunt-palette.png)
+
 
 ## Typography
 
