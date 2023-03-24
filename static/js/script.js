@@ -11,19 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
     let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems);
 
-// times out the message alerts
-
+    // times out the message alerts
     setTimeout(function () {
-        $('#message-alert').fadeOut('fast');
-    },2000);
+        let alert = document.getElementById('message-alert');
+        fadeOut(alert);
+    })
 
-
+    // adds correct year to copyright in footer
+    let date = (new Date().getFullYear());
+    document.getElementById("copyright").innerHTML = date;
 
 });
-
-// adds correct year to copyright in footer
-
-$("#copyright").text(new Date().getFullYear());
 
 // scroll to top button code was sourced from W3schools
 
@@ -47,4 +45,21 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+// function for fading out the alerts
+// researched code on stack overflow and codepen
+
+function fadeOut(fadeTarget) {
+    let fadeEffect = setInterval(function() {
+        if (!fadeTarget.style.opacity) {
+            fadeTarget.style.opacity = 1;
+        }
+        if (fadeTarget.style.opacity > 0) {
+            fadeTarget.style.opacity -= 0.01;
+        } else {
+            clearInterval(fadeEffect);
+        }
+    }, 40);
+    
 }
