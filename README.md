@@ -34,9 +34,15 @@ customise the created posts with an image.
 
 ## Site owner
 
-[Back to top](<#contents>)
+The goal for the site owner is to provide a stable user experience that is enjoyable to encourage user interaction. The site should be accessible and appealing to new users, it should also be scaleable with an easy way to add more features in the future. Content on the site should be easily moderated to ensure community standards are met and be of high quality. The GitHub project board had a to do section where user stories where first placed, an in progress tab where user stories where moved to when being worked on, a done section where the stories where moved when completed. A bugs tab for any coding problems that arose during the process and a won't-have section for features that where not included in this stage of the project.
+
+<br>
+
+[Back to top](#table-of-contents)
 
 # Project management
+
+I managed this project using an [Agile](https://agilemanifesto.org/) methodology. I used GitHub projects to refine epic tasks to break them down into user stories. This ensured that tracking and organising the project into iterations was manageable. 
 
 ## Agile development
 

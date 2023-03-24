@@ -1,2 +1,0 @@
-Photo by <a href="https://unsplash.com/@travelnomades?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Travel Nomades</a> on <a href="https://unsplash.com/images/sports/soccer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
