@@ -17,9 +17,24 @@ The site is hosted on Heroku the link is below
 
 # Project objectives
 
+## Main objective
+
+The main objective of this project was to create a full stack website as part of [The Code Institute](https://codeinstitute.net/) Diploma in Full Stack Software Development.
+This project is my fourth portfolio project on the course. Amongst other assesment criteria, this project had to be built using HTML, CSS, JavaScript, Python and the Django framework, and feature full CRUD functionality and user authorisation. The project also had to be planned and designed using agile methodologies. 
+
+One of my main interests is sports I decided to create a website where users of the site can create posts about the current affairs in football.
+
+My aim was to create a minimum viable product that can be built upon with more features in the future and also to create a website that I would enjoy creating and using in the future as well.
+
 ## Site users
 
+Users of the site can create posts, and comments, upvote and downvote posts and add tags to their own created posts. Users can view, edit and delete their own posts also.
+I tried to make the site as appealing as it could be to as broad of an audience as possible with a clear layout an easy way of learning how to use the site and the ability to 
+customise the created posts with an image.
+
 ## Site owner
+
+[Back to top](<#contents>)
 
 # Project management
 
