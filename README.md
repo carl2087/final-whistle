@@ -71,7 +71,7 @@ I drew the database schemas up in Microsoft Excel &copy; The shema diagrams wher
 [Back to table of contents](#table-of-contents)
 
 
-# User experience
+# User experience and design
 
 When planning the site and how it would affect the user experince is first created wireframes for the project to decide on the layout of each page.
 I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme for the site. I used Google &copy; fonts to decide on which fonts I would use for the site. I have included images below relating to the steps I undertook.
@@ -79,63 +79,75 @@ I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme fo
 ## Wireframe images
 
 ### Home page for desktop
+
 <br>
 
 ![Home page desktop](./assets/wireframes/home-page.png)
 
 ### Home page for tablet
+
 <br>
 
 ![Home page tablet](./assets/wireframes/home-page-tab.png)
 
 ### Home page for mobile phone
+
 <br>
 
 ![Home page mobile](./assets/wireframes/home-page-mob.png)
 
 ### Create a post page 
+
 <br>
 
 ![Create a post page](./assets/wireframes/create-post.png)
 
 ### Create a post page tablet 
+
 <br>
 
 ![Create a post page tablet](./assets/wireframes/create-post-tab.png)
 
 ### Create a post page mobile phone
+
 <br>
 
 ![Create a post page mobile](./assets/wireframes/create-post-mob.png)
 
 ### Comment page 
+
 <br>
 
 ![Create a comment page](./assets/wireframes/comment-on-a-post.png)
 
 ### Comment page tablet
+
 <br>
 
 ![Create a comment page tablet](./assets/wireframes/comment-on-a-post-tablet.png)
 
 ### Comment page mobile phone
+
 <br>
 
 ![Create a comment page mobile](./assets/wireframes/comment-on-a-post-mobile.png)
 
 ### Login and user register pages
+
 <br>
 
 ![Log in page](./assets/wireframes/log-page.png)
 ![Register page](./assets/wireframes/reg-page.png)
 
 ### Login and user register pages
+
 <br>
 
 ![Log in page tablet](./assets/wireframes/log-page-tab.png)
 ![Register page tablet](./assets/wireframes/reg-page-tab.png)
 
 ### Login and user register pages
+
 <br>
 
 ![Log in page mobile](./assets/wireframes/log-page-mob.png)
@@ -144,18 +156,96 @@ I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme fo
 
 ## Colour sheme
 
-I used [Color Hunt](https://colorhunt.co/) to select the colour scheme for the site I find it a useful site as it has a random generator button so you can see a lot of different colour schemes quickly. I decided to use the colour palette below as the colours are not to bright and work well together.
+I used [Color Hunt](https://colorhunt.co/) to select the colour scheme for the site I find it a useful site as it has a random generator button so you can see a lot of different colour schemes quickly. I decided to use the colour palette below as the colours are not too bright and work well together.
+
+Color hunt palette
 
 ![Color hunt colour palette](./assets/wireframes/color-hunt-palette.png)
+
+Color hunt palette codes
+
+![Color hunt colour palette code](./assets/readme-images/color-hunt-palette-code.png)
+
+## Logo 
+
+For the logo I used a whistle icon from [flaticon](https://www.flaticon.com/free-icon/whistle_3627675?term=whistle&page=1&position=34&origin=search&related_id=3627675) the use of this logo is free as long as it is attributed. I placed the whistle icon on a white square background with rounded corners.
+
+<br>
+
+![Whistle icon](./assets/readme-images/whistle-icon.png)
+
+## Favicon
+
+I created the favicon on [real favicon generator](https://realfavicongenerator.net/). I used the whistle icon above to keep the design of the site consistent.
+
+<br>
+
+![Favicon](./assets/readme-images/favicon.png)
 
 
 ## Typography
 
+I used Google&copy; fonts to decide on which type of fonts to use on The Final Whistle for headings and titles I used [Nunito](https://fonts.google.com/specimen/Nunito) and for bodies of text I used [Rubik](https://fonts.google.com/specimen/Rubik). I chose these fonts because they are clear and synergize well together I chose to use a different fonts for headers and bodies of text just to give the site some nice customization.
+
+<br>
+
+![Nunito](./assets/readme-images/nunito-title-text.png)
+![Rubik](./assets/readme-images/rubik-bodies-of-text.png)
+
+## CSS framework
+
+To help speed up design and building of the site I decided to use the Materialize&copy; front-end framework I chose this because firstly I like the way the cards looked and worked which forms the basis of the index page on the site and also to challenge myself to use a different framework from Bootstrap&copy;. This did have it's challenges along the way to ensure everything worked as it should but in the end I think it was the right choice and would do it again.
+
+<br>
+
+![Materielize](./assets/readme-images/materialize-logo.png)
+
+
 ## Site structure
 
-## Features
+I tried to keep the site structure simple, clean and easy to learn how to use to encourage users of the site to want to come back and use it again and again. Content is hidden from users of the site who are not logged in and prompt the user to register or login to access the different areas of the site. The navbar at the top of the page will change options depending on the login state of the site user.
 
-Home page etc
+<br>
+
+![navbar logged in](./assets/readme-images/logged-in-links.png)
+![navbar logged out](./assets/readme-images/logged-out-links.png)
+
+[Back to table of contents](#table-of-contents)
+
+# Features
+
+## Existing features
+
+### Home page
+
+The home page is the first page of the site that users see when they navigate to The Final Whistle URL. It's designed to be simple with eye-catching cards with images that relate to the post users can click the title of the post to initiate a card action that reveals the excerpt of the post to give the user a small glimpse of what the post says if they then decide to click on the full post link they will be taken to the post detail screen where they can read the full post or comment on the post.
+
+<br>
+
+Home page Desktop
+
+![The Final Whistle homepage](./assets/readme-images/homepage-desktop.png)
+
+Home page tablet
+
+![The Final Whistle homepage tablet](./assets/readme-images/homepage-tablet.png)
+
+Home page mobile phone
+
+![The Final Whistle homepage mobile](./assets/readme-images/homepage-mobile.png)
+
+### Navbar
+
+The site has a navbar along the top which which has links for the home page which is The Final Whistle logo and depending on the current logged in state for the user there will be links to register and login or logout. There is also a home button link as well which is always visible. On smaller devices The Final Whistle logo moves to the centre of the navbar and a hamburger menu appears with the relevant site links nested inside.
+
+![The Final Whistle homepage mobile](./assets/readme-images/navbar-desktop.png)
+
+![The Final Whistle homepage mobile](./assets/readme-images/navbar-tablet-mobile.png)
+
+![The Final Whistle hamburger menu](./assets/readme-images/hamburger-menu.png)
+
+### Footer
+
 
 ## Future Features
 
