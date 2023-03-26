@@ -36,7 +36,6 @@ customise the created posts with an image.
 
 The goal for the site owner is to provide a stable user experience that is enjoyable to encourage user interaction. The site should be accessible and appealing to new users, it should also be scaleable with an easy way to add more features in the future. Content on the site should be easily moderated to ensure community standards are met and be of high quality. 
 
-<br>
 
 [Back to table of contents](#table-of-contents)
 
@@ -66,7 +65,6 @@ I drew the database schemas up in Microsoft Excel &copy; The shema diagrams wher
 ![Database schema comment model](./assets/wireframes/comment-model-diagram.png)
 ![Database schema post model](./assets/wireframes/post-model-diagram.png)
 
-<br>
 
 [Back to table of contents](#table-of-contents)
 
@@ -80,75 +78,63 @@ I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme fo
 
 ### Home page for desktop
 
-<br>
 
 ![Home page desktop](./assets/wireframes/home-page.png)
 
 ### Home page for tablet
 
-<br>
 
 ![Home page tablet](./assets/wireframes/home-page-tab.png)
 
 ### Home page for mobile phone
 
-<br>
 
 ![Home page mobile](./assets/wireframes/home-page-mob.png)
 
 ### Create a post page 
 
-<br>
 
 ![Create a post page](./assets/wireframes/create-post.png)
 
 ### Create a post page tablet 
 
-<br>
 
 ![Create a post page tablet](./assets/wireframes/create-post-tab.png)
 
 ### Create a post page mobile phone
 
-<br>
 
 ![Create a post page mobile](./assets/wireframes/create-post-mob.png)
 
 ### Comment page 
 
-<br>
 
 ![Create a comment page](./assets/wireframes/comment-on-a-post.png)
 
 ### Comment page tablet
 
-<br>
 
 ![Create a comment page tablet](./assets/wireframes/comment-on-a-post-tablet.png)
 
 ### Comment page mobile phone
 
-<br>
 
 ![Create a comment page mobile](./assets/wireframes/comment-on-a-post-mobile.png)
 
 ### Login and user register pages
 
-<br>
 
 ![Log in page](./assets/wireframes/log-page.png)
 ![Register page](./assets/wireframes/reg-page.png)
 
 ### Login and user register pages
 
-<br>
 
 ![Log in page tablet](./assets/wireframes/log-page-tab.png)
 ![Register page tablet](./assets/wireframes/reg-page-tab.png)
 
 ### Login and user register pages
 
-<br>
 
 ![Log in page mobile](./assets/wireframes/log-page-mob.png)
 ![Register page mobile](./assets/wireframes/reg-page-mob.png)
@@ -170,7 +156,6 @@ Color hunt palette codes
 
 For the logo I used a whistle icon from [flaticon](https://www.flaticon.com/free-icon/whistle_3627675?term=whistle&page=1&position=34&origin=search&related_id=3627675) the use of this logo is free as long as it is attributed. I placed the whistle icon on a white square background with rounded corners.
 
-<br>
 
 ![Whistle icon](./assets/readme-images/whistle-icon.png)
 
@@ -178,7 +163,6 @@ For the logo I used a whistle icon from [flaticon](https://www.flaticon.com/free
 
 I created the favicon on [real favicon generator](https://realfavicongenerator.net/). I used the whistle icon above to keep the design of the site consistent.
 
-<br>
 
 ![Favicon](./assets/readme-images/favicon.png)
 
@@ -187,7 +171,6 @@ I created the favicon on [real favicon generator](https://realfavicongenerator.n
 
 I used Google&copy; fonts to decide on which type of fonts to use on The Final Whistle for headings and titles I used [Nunito](https://fonts.google.com/specimen/Nunito) and for bodies of text I used [Rubik](https://fonts.google.com/specimen/Rubik). I chose these fonts because they are clear and synergize well together I chose to use a different fonts for headers and bodies of text just to give the site some nice customization.
 
-<br>
 
 ![Nunito](./assets/readme-images/nunito-title-text.png)
 ![Rubik](./assets/readme-images/rubik-bodies-of-text.png)
@@ -196,16 +179,14 @@ I used Google&copy; fonts to decide on which type of fonts to use on The Final W
 
 To help speed up design and building of the site I decided to use the Materialize&copy; front-end framework I chose this because firstly I like the way the cards looked and worked which forms the basis of the index page on the site and also to challenge myself to use a different framework from Bootstrap&copy;. This did have it's challenges along the way to ensure everything worked as it should but in the end I think it was the right choice and would do it again.
 
-<br>
 
-![Materielize](./assets/readme-images/materialize-logo.png)
+![Materialize](./assets/readme-images/materialize-logo.png)
 
 
 ## Site structure
 
 I tried to keep the site structure simple, clean and easy to learn how to use to encourage users of the site to want to come back and use it again and again. Content is hidden from users of the site who are not logged in and prompt the user to register or login to access the different areas of the site. The navbar at the top of the page will change options depending on the login state of the site user.
 
-<br>
 
 ![navbar logged in](./assets/readme-images/logged-in-links.png)
 ![navbar logged out](./assets/readme-images/logged-out-links.png)
@@ -219,8 +200,6 @@ I tried to keep the site structure simple, clean and easy to learn how to use to
 ### Home page
 
 The home page is the first page of the site that users see when they navigate to The Final Whistle URL. It's designed to be simple with eye-catching cards with images that relate to the post users can click the title of the post to initiate a card action that reveals the excerpt of the post to give the user a small glimpse of what the post says if they then decide to click on the full post link they will be taken to the post detail screen where they can read the full post or comment on the post.
-
-<br>
 
 Home page Desktop
 
@@ -238,16 +217,153 @@ Home page mobile phone
 
 The site has a navbar along the top which which has links for the home page which is The Final Whistle logo and depending on the current logged in state for the user there will be links to register and login or logout. There is also a home button link as well which is always visible. On smaller devices The Final Whistle logo moves to the centre of the navbar and a hamburger menu appears with the relevant site links nested inside.
 
+Desktop navbar
+
 ![The Final Whistle homepage mobile](./assets/readme-images/navbar-desktop.png)
 
+Tablet and mobile home page
+
 ![The Final Whistle homepage mobile](./assets/readme-images/navbar-tablet-mobile.png)
+
+Hamburger menu
 
 ![The Final Whistle hamburger menu](./assets/readme-images/hamburger-menu.png)
 
 ### Footer
 
+The footer for The Final Whistle has the title of the site and also has social links to popular platforms where The Final Whistle will have presence when clicked on they open in a new tab to keep the site ready and waiting to go back to.
+
+Desktop Footer
+
+![The Final Whistle footer desktop](./assets/readme-images/footer-desktop.png)
+
+Tablet and mobile footer
+
+![The Final Whistle footer tablet and mobile](./assets/readme-images/footer-tablet-mobile.png)
+
+### Create a post 
+
+On this page thsi enables a registered or logged in user to create a post if the user is not logged in they will be prompted to create an account or sign in to their account. The form will prompt the user if they have not filled out a required part of the form. The user can choose whether they want to upload their own image if the user declines to do so, a generic image is added automatically. When a user has succesfully submitted a post they are shown a message that lets them know that their post is awaiting approval.
+
+Create a post page
+
+![The Final Whistle create a post page](./assets/readme-images/create-a-poat-page.png)
+
+Screen when not logged in 
+
+![The Final Whistle not logged in create a post page](./assets/readme-images/not-logged-in-create-post.png)
+
+Post succesful message
+
+![The Final Whistle post successful](./assets/readme-images/post-succesful-message.png)
+
+
+### My posts page
+
+There is a link on the home page that will take the user to their own posts page which has links underneath each post that allow the user to edit their own posts and also delete their own posts as well if a user decides to edit their own posts they are taken to a new screen with the edit a post form which is pre-populated with the data that was entered on the original post. On this page there is a submit button to save the changes and a cancel button which will give the user chance to confirm the cancel in case it was pressed accidentally by the way of a modal appearing. The delete button works the same way a modal appears to give the user the chance to confirm the delete or cancel the delete. If the user is not logged in or registered they will be taken to a screen to prompt them to log in or register an account.
+
+My posts page
+
+![The Final Whistle my posts page](./assets/readme-images/my-post-page.png)
+
+Edit post
+
+![The Final Whistle edit post page](./assets/readme-images/edit-post-page.png)
+
+Edit succesful message
+
+![The Final Whistle edit successful page](./assets/readme-images/post-edit-succesful.png)
+
+
+Cancel edit post modal
+
+![The Final Whistle cancel edit modal](./assets/readme-images/cancel-edit.png)
+
+Delete post modal
+
+![The Final Whistle cancel edit modal](./assets/readme-images/delete-post-modal.png)
+
+Not logged in page
+
+![The Final Whistle not logged in page](./assets/readme-images/not-logged-in-my-posts.png)
+
+### Post detail page
+
+When a user clicks on the full post link on the cards that feature on the home page they are taken to the post detail page. The post detail page features an enlarged image that was uploaded with the post that if clicked on will go full screen to give the user a better experience of viewing it. The comments made on the post are underneath the image. With the post content to the right of the image there are icons underneath the text that show the number of comments made and gives the option to upvote and downvote the post. The arrows are only clickable if the user is logged in and will be red rather than blue if the user has clicked on them also if the user is logged in they will be able to comment on the post and if they are not logged in there is a link instead asking them to log in to be able to leave a comment. 
+
+Post detail page desktop
+
+![The Final Whistle post detail page](./assets/readme-images/post-detail-page.png)
+
+Post detail page tablet and mobile
+
+![The Final Whistle post detail page tablet](./assets/readme-images/post-detail-tablet.png)
+![The Final Whistle post detail page mobile](./assets/readme-images/post-detail-mobile.png)
+
+Post detail page when not logged in 
+
+![The Final Whistle post detail page not logged in](./assets/readme-images/post-detail-no-log-on.png)
+
+Upvote and downvote arrows
+
+![The Final Whistle post detail upvote and downvote](./assets/readme-images/upvote-downvote.png)
+
+Number of comments icon
+
+![The Final Whistle post detail number of comments](./assets/readme-images/num-of-comments.png)
+
+### Login and register 
+
+To give visitors of the site the ability to register for an account and to be able to sign in etc. I used a Django feature called allauth this makes it easier to set up security for users and streamlines the whole process.
+
+Register form
+
+![The Final Whistle create an account](./assets/readme-images/create-account-page.png)
+
+Login form
+
+![The Final Whistle login page](./assets/readme-images/login-page.png)
+
+### Custom 404 page
+
+I decided to add a customer 404 page that adds a bit of humour if the user navigates to an unknown URL, it stays within the football theme and I found the gif on 
+[Giphy](https://giphy.com/happydogstickers).
+
+404 page
+
+![The Final Whistle 404 page](./assets/readme-images/404-page.png)
+
+### Back to top button
+
+For an ease of life function I included a back to top button the button only appears when the screen is scrolled down by more then 600 pixels. I did this so that when accessing the site on tablets and mobile phones it is easier to get back to the top of the page as there is quite a lot of screen scroll involved on these devices. I sourced the code for the button from [W3schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp).
+
+Back to top button
+
+![The Final Whistle back to top button](./assets/readme-images/back-to-top-button.png)
 
 ## Future Features
+
+There is scope for a lot of expansion to The Final Whistle. The site as it is, is a minimal viable product, however there are features I would like to add in the future.
+
+### Share button
+
+A share button that appears on on the post detail page to enable users of the site to share the posts on other social media platforms which I believe would drive more traffic to the site and would add more functionality to the site as well
+
+### Favourite posts
+
+The ability to bookmark the users favourite posts to give easy access back to them, also within this feature the ability to bring up posts that the user has commented on as well so they can easily jump back into any conversations they may have been having.
+
+### Search function
+
+The ability to search through posts on the site by team, title, user, content and also tags that are on the posts as well. I believe this would add great functionality to the site and take more advantage of the tagging system as well.
+
+### Social network sign in
+
+The ability to use other social networks to log into the site this would bring the site in line with a lot of other websites and is a nice qulaity of life improvement.
+
+### Password reset
+
+To give users of the site the option to change their passwords and also reset their passwords as well if they forget what it is. When implementing this I would also add in confirmation emails to users of the site on succesfully creating their accounts.
 
 ## Technologies used
 
@@ -257,7 +373,7 @@ manual testing deployed early to Heroku ...
 
 # Deployment
 
-# Credits
+# Credits and acknowledgements
 
 The main image at the top of the readme is created on [Am I responsive](https://ui.dev/amiresponsive)
 
