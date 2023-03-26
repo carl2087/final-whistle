@@ -365,11 +365,201 @@ The ability to use other social networks to log into the site this would bring t
 
 To give users of the site the option to change their passwords and also reset their passwords as well if they forget what it is. When implementing this I would also add in confirmation emails to users of the site on succesfully creating their accounts.
 
-## Technologies used
+### Team databse/model
+
+I would also like to add a database for the football teams as well with individual pages that gives a brief overview and history for each club storeed in the database.
+
+[Back to table of contents](#table-of-contents)
+
+# Technologies used
+
+## Languages
+
+[HTML5](https://www.w3.org/standards/webdesign/htmlcss)
+
+* This provides the basic structure and layout of the site 
+
+[CSS3](https://www.w3.org/standards/webdesign/htmlcss)
+
+* This provides the custom styling for site along with the Materialize framework
+
+[JavaScript](https://www.javascript.com/)
+
+* This provides the front-end scripting logic for the site 
+
+[Python](https://www.python.org/)
+
+* This provides the back-end logic for the site handling data on the back end working hand in hand with Django
+
+[Git](https://git-scm.com/)
+
+* This provides version control on the site 
+
+## Frameworks
+
+[Materialize](https://materializecss.com/)
+
+* A modern responsive front-end framework based on Material Design
+
+[Django](https://www.djangoproject.com/)
+
+* Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+
+## Software used in production
+
+[Balsamiq](https://balsamiq.com/)
+
+* Used to build the wireframes for the project
+
+[GitHub](https://github.com/)
+
+* An internet hosting service used for version control. Used to host The Final Whistle repository and for the project board used for project management and user stories.
+
+[Gitpod](https://www.gitpod.io/)
+
+* Gitpod is a cloud development environment for teams to efficiently and securely develop software.
+
+[Heroku](https://www.heroku.com/)
+
+* Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. It is also where The Final Whistle is hosted as well.
+
+[ElephantSql](https://www.elephantsql.com/)
+
+* ElephantSQL installs and manages PostgreSQL databases for you.
+
+[Cloudinary](https://cloudinary.com/)
+
+* Cloudinary is an end-to-end image- and video-management solution for websites and mobile apps, covering everything from image and video uploads, storage, manipulations, optimizations to delivery.
+
+[Lighthouse testing](https://web.dev/measure/?gclid=Cj0KCQjw2v-gBhC1ARIsAOQdKY3_TZb_Nus0EkkAH7Bb9l7_N7g3dud-sCco_igeA9lq3_387rdItZcaAmH5EALw_wcB)
+
+* PageSpeed Insights (PSI) reports on the user experience of a page on both mobile and desktop devices, and provides suggestions on how that page may be improved.
+
+[Responsive design](https://responsivedesignchecker.com/)
+
+* This is a website that allows you to easily test if the site you have created is fully responsive across a range of devices.
+
+[Google Chrome dev tools](https://developer.chrome.com/docs/devtools/)
+
+* Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.
+
+[Wave web accessibility evaluation tool](https://wave.webaim.org/)
+
+* WAVE® is a suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities. WAVE can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, but also facilitates human evaluation of web content.
+
+[Excel](https://www.microsoft.com/en/microsoft-365/excel)
+
+* Microsoft Excel is the industry leading spreadsheet software program, a powerful data visualization and analysis tool.
+
+[Slack](https://slack.com/intl/en-gb)
+
+* Slack is an instant messaging program designed by Slack Technologies and owned by Salesforce. I use Slack to communicate with other Code Institute students to troubleshoot problems or just to help when the going gets tough!
+
+[Back to table of contents](#table-of-contents)
 
 # Testing
 
-manual testing deployed early to Heroku ...
+## Manual testing 
+
+I deployed the site straight away to Heroku to ensure the Django app was set up correctly and I kept on testing the functionality of the site throughout the whole process of building The Final Whistle. When the site was completed I then went onto testing the site with third-party applications and any errors that flagged have been corrected. The issues I found during production are listed below
+
+### HTML tags rendering in cards on the home page
+
+This was due to Summernote not being compatible with Materilize and the HTML tags where showing in the front end. To fix this I removed summernote from my site and just used the built in Django admin area.
+
+### Pagination links not working
+
+The pagination links at the bottom of the screen were not working correctly. During de-bugging I found this to be an issue within the HTML code and it not being typed correctly also there was a spelling mistake. These issues were rectified.
+
+### Post detail page not rendering
+
+The post detail page was not rendering in the front end due to a spelling mistake in the views.py code this was fixed and the issue was no more.
+
+There has been extensive testing to ensure that no issues to my knowledge remain.
+
+## Validation tests
+
+### W3C HTML
+
+I checked the HTML of the site using the [W3C HTML validation](https://validator.w3.org/) I checked each page individually with the images below
+
+Home page HTML
+
+![Home page html check](./assets/code-check-images/index-html-check.png)
+
+Post detail HTML
+
+![Post detail html check](./assets/code-check-images/post-detail-html-check.png)
+
+My posts HTML
+
+![My posts html check](./assets/code-check-images/my-posts-html-check.png)
+
+Edit post HTML
+
+![Edit post html check](./assets/code-check-images/edit-post-html-check.png)
+
+Delete post HTML
+
+![Delete post html check](./assets/code-check-images/delete-post-html-check.png)
+
+Create post HTML
+
+![Create post html check](./assets/code-check-images/create-post-html-check.png)
+
+Login HTML
+
+![login html check](./assets/code-check-images/login-html-check.png)
+
+Logout HTML
+
+![logout html check](./assets/code-check-images/logout-html-check.png)
+
+Register HTML
+
+![register html check](./assets/code-check-images/regitser-html-check.png)
+
+404 HTML
+
+![404 page html check](./assets/code-check-images/404-html-check.png)
+
+### W3C CSS
+
+I checked the CSS of the site using [W3C CSS](https://jigsaw.w3.org/css-validator/) no errors where shown that had to be corrected.
+
+![CSS check](./assets/code-check-images/css-validated.png)
+
+### JavaScript
+
+I tested the javascript code using [jshint](assets/code-check-images/views-py-check.png) woth any errors found corrected the errors that were found was a few missing semicolons
+
+![javascript check](./assets/code-check-images/jshint-screenshot.png)
+
+### Python 
+
+I used [The Code Institute](https://pep8ci.herokuapp.com/) python linter to check the python code within my site with any errors shown fixed.
+
+Admin file
+
+![admin.py check](./assets/code-check-images/admin-py-check.png)
+
+Forms file
+
+![forms.py check](./assets/code-check-images/forms-py-check.png)
+
+Models file
+
+![models.py check](./assets/code-check-images/models-py-check.png)
+
+Views file
+
+![views.py check](./assets/code-check-images/views-py-check.png)
+
+## Lighthouse testing 
+
+I used the lighthouse testing in Chrome dev tools to test my site also. When testing the site using lighthouse I found my page had a slow load time so I implemented changes to the site code regarding this. Firstly I moved any script elements that were in the head of my HTMl file to the bottom of the page and secondly I removed jQuery from my site as this was causing a lot of speed issues and updated the javascript code to ensure the same functionality was available.
+
+
 
 # Deployment
 

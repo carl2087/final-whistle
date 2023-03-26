@@ -125,8 +125,6 @@ body{
 
 .github-logo:hover {
     color: #227c70;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
 }
 
 .copy-div {
@@ -144,7 +142,7 @@ body{
 .social-links:hover {
     color: #227c70;
     transition: all .4s ease;
-    -webkit-transition: all .4s ease;
+    /* -webkit-transition: all .4s ease; */
 }
 
 .social-links-margin {
