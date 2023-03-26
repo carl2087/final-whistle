@@ -1,3 +1,14 @@
+# Table of contents
+
+* [Project Objectives](#project-objectives)
+* [Project Management](#project-management)
+* [User experience and design](#user-experience-and-design)
+* [Features](#features)
+* [Technologies used](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits & Acknowledgements](#credits)
+
 # The Final Whistle
 
 The Final Whistle is a full stack web application built using the Django Framework. The main purpose of the site is to provide a platform for the user to write a short blog posting their opinion on the current affairs that is happening in football. The intended target audience is anyone who has an interest in football from teenagers to adults. 
@@ -10,10 +21,7 @@ The site is hosted on Heroku the link is below
 
 [The Final Whistle](https://the-final-whistle.herokuapp.com/)
 
-
 [![The Final Whistle devices image](./assets/readme-images/am-i-responsive.png)](https://the-final-whistle.herokuapp.com/)
-
-# Table of contents
 
 # Project objectives
 
@@ -557,14 +565,162 @@ Views file
 
 ## Lighthouse testing 
 
-I used the lighthouse testing in Chrome dev tools to test my site also. When testing the site using lighthouse I found my page had a slow load time so I implemented changes to the site code regarding this. Firstly I moved any script elements that were in the head of my HTMl file to the bottom of the page and secondly I removed jQuery from my site as this was causing a lot of speed issues and updated the javascript code to ensure the same functionality was available.
+I used the lighthouse testing in Chrome dev tools to test my site also. When testing the site using lighthouse I found my page had a slow load time so I implemented changes to the site code regarding this. Firstly I moved any script elements that were in the head of my HTML file to the bottom of the page and secondly I removed jQuery from my site as this was causing a lot of speed issues and updated the javascript code to ensure the same functionality was available. There is a difference in the lighthouse testing from the tests in the dev tools compared to the the tests completed on the PageSpeed insights website. This is reagrding the best practices section on the website it is 100 and inside dev tools it is 92 it states this is because of issues raised in the issues tab but they do not show so I have been unable to fix this discrepancy.
 
+### Lighthouse homepage test
 
+![homepage lighthouse test](./assets/lighthouse-test/homepage-desktop-lh.png)
+
+![homepage lighthouse test](./assets/lighthouse-test/homepage-mob-lh.png)
+
+### Lighthouse my posts page
+
+![my posts lighthouse test](./assets/lighthouse-test/my-posts-lh-website-dt.png)
+
+![my posts lighthouse test](./assets/lighthouse-test/my-posts-lh-website.png)
+
+![my posts lighthouse test](./assets/lighthouse-test/my-post-lh.png)
+
+### Lighthouse post detail page
+
+![post detail lighthouse test](./assets/lighthouse-test/post-detail-lh.png)
+
+### Edit post page
+
+![edit post lighthouse test](./assets/lighthouse-test/edit-post-lh.png)
+
+### Create a post page
+
+![create post lighthouse test](./assets/lighthouse-test/create-post-lh.png)
+
+[Back to table of contents](#table-of-contents)
 
 # Deployment
 
-# Credits and acknowledgements
+## Project Deployment via Heroku
 
-The main image at the top of the readme is created on [Am I responsive](https://ui.dev/amiresponsive)
+This is a guide on how to deploy a full stack web application via [Heroku](https://www.heroku.com).
+
+1. **Open your project in a code editor e.g [GitPod](https://www.gitpod.io/) or [VS Code](https://code.visualstudio.com/) and make sure it is connected to a GitHub repo.**
+
+2. **Install Django and supporting libraries** 
+* In the terminal type pip3 install 'django<4' gunicorn
+* In the terminal type pip3 install dj_database_url psycopg2
+* In the terminal type pip3 install dj3-cloudinary-storage
+
+3. **Create a requirements file**
+* type pip3 freeze --local > requirements.txt
+
+4. **Create a Django project** 
+* In the terminal type django-admin startproject 'project_name' - project_name is desired project name
+
+5. **Create app**
+* In the terminal type python3 manage.py startapp 'app_name' - app_name is desired app name
+
+6. **Add the new app into settings.py**
+* In settings.py add the app name into the installed apps array variable and save the file
+
+7. **Migrate Changes**
+* In the terminal type python3 manage.py migrate
+* In the terminal type python3 manage.py runserver
+
+8. **Create a new external database**
+* Log into [ElephantSQL](https://www.elephantsql.com/) or create new account.
+* Click to create new instance
+* Set up the plan by giving it a name and select the tiny turtle plan (which is free)
+* Select a region (data center) nearest to your location
+* Click review, check that the details are correct and then click to create instance
+* Return to ElephantSQL dashboard and click on the database instance name for the project
+* Copy the ElephantSQL database URL using the copy icon. It begins with 'postgres://'
+
+9. **Create the Heroku App**
+* Log into [Heroku](https://www.heroku.com/) or create an account.
+* Click to create new heroku app. Give the app an app name and select Europe as the region
+* Open the app settings tab
+* Click to reveal the config vars
+* Add a config var called DATABASE_URL and paste in the ElephantSQL database URL
+
+10. **Attach the database**
+* In your code editor create a new env.py file on the top level of the project directory
+* In the env.py file add import os at the top of the file
+* Set environment variables inside the env file by adding - os.environ["DATABASE_URL"] = and then paste in the ElephantSQL database URL
+* Set secret key variable inside the env file by adding - os.environ["SECRET_KEY"] = and then add your own secret key here
+* In Heroku add the secret key variable value to the application config vars
+
+11. **Prepare the environment and settings.py file**
+* In settings.py reference and import the env.py by adding the following code to the file - 
+from pathlib import Path
+import os
+import dj_database_url
+if os.path.isfile("env.py"):
+    import env
+* Remove the hardcoded secret key and replace with links to the secret key variable in the env.py and in the heroku config vars by adding the following code - 
+SECRET_KEY = os.environ.get('SECRET_KEY')
+* Comment out the old DATABASES object variable and add a new databases variable by adding the following code - 
+DATABASES = {
+    'default':
+    dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
+12. **Save all files and make migrations**
+* In the terminal type python3 manage.py migrate
+* Save all files
+
+13. **Get static and media files stored on Cloudinary**
+* Log in or sign up for an account on [Cloudinary](https://cloudinary.com/).
+* Copy cloundinary URL API environment variable from Cloudinary dashboard
+* Add cloudinary URL to env.py file by adding the following code - os.environ["CLOUDINARY_URL"] = and then paste in the Cloudinary URL
+* In Heroku add in the Cloudinary URL into the application config vars on the app settings. The key should be CLOUDINARY_URL and the value should be the Cloudinary URL
+* Add DISABLE_COLLECTSTATIC to Heroku config vars with a value of 1. This is a temporary step that will be removed on deployment
+* Add Cloudinary libraries into installed apps in settings.py. To do this add the following code into the INSTALLED_APPS array variable - 'cloudinary_storage', 'cloudinary'. Cloudinary storage needs to be before django.contrib.staticfiles. Cloudinary needs to be after django.contrib.staticfiles.
+* Tell Django to use Cloudinary to store media and static files by adding the following code into the settings.py file -
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/' 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+* Link file to the templates directory in Heroku. Add the following code into the settings.py file under the BASE_DIR variable - 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+* Change the templates directory to templates_dir. To do this add the following code inside the templates array variable -
+'DIRS':[TEMPLATES_DIR],
+* Add Heroku hostname to allowed_hosts by adding the following code into the allowed hosts variable - ["project_name.herokuapp.com", "localhost"] - project_name is the project name
+* Create three new folders in top level of project directory - media, static and templates
+
+14. **Create Procfile**
+* Create a file called Procfile on the top level of the project directory
+* Add the following code into the procfile - web: gunicorn project_name.wsgi - project_name is the project name
+* Save all files
+
+15. **Add, commit and push to repo**
+* In the terminal type the following commands to push to the GitHub repo -
+git add
+git commit -m "Deployment commit"
+git push
+
+16. **Deploy the project to Heroku from the GitHub repo**
+* On the Heroku project add another config var - the key should be PORT and the value should be 8000
+* Under the project deploy tab, for the deployment method select GitHub. Search for the repository name and click connect. Once the project is connected scroll down to the manual deployment section and click deploy branch. Make sure you have the main branch selected
+
+[Back to table of contents](#table-of-contents)
+
+# Credits 
+
+* The main image at the top of the readme is created on [Am I responsive](https://ui.dev/amiresponsive).
+* The default image for the cards that feature on the site was sourced from [unsplash](https://unsplash.com/images/sports/soccer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) and the photo was taken by [Travel Nomades](https://unsplash.com/@travelnomades?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
+* For other images that are on the cards they where sourced through Google or through social media posts all rights are reserved to their original owners.
+* I used [Font Awesome](https://fontawesome.com/) for the social media links.
+
+Any other resources used have been acknowledged within the readme and I am eternally grateful for all the resources that are available free of charge.
+
+[Back to table of contents](#table-of-contents)
 
 # Acknowledgements
+
+I would like to thank my mentor Victor Miclovich who has given me great advice and is very clear in explaining processes. I would also like to thank the Code Institute Slack community who are great and there is always someone ready to help if you are stuck or just to pick you up if you're feeling under the pressure.
+
+Thank you to all
+
+Carl Ellis
+
+[Back to table of contents](#table-of-contents)
