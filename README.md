@@ -68,7 +68,7 @@ I also used GitHub projects to organise my project tasks in the same way this in
 
 ## Database schema
 
-I drew the database schemas up in Microsoft Excel &copy; The shema diagrams where used to plan the database models, fields and also the relationships between the models and how they would interact with each other. The Final Whistle consists of two models one for comments and one for posts. There is an oppurtunity to create a third model for the football teams in a future release of the site.
+I drew the database schemas up in Microsoft Excel The schema diagrams were used to plan the database models, fields and also the relationships between the models and how they would interact with each other. The Final Whistle consists of two models one for comments and one for posts. There is an oppurtunity to create a third model for the football teams in a future release of the site.
 
 ![Database schema comment model](./assets/wireframes/comment-model-diagram.png)
 ![Database schema post model](./assets/wireframes/post-model-diagram.png)
@@ -193,7 +193,7 @@ To help speed up design and building of the site I decided to use the Materializ
 
 ## Site structure
 
-I tried to keep the site structure simple, clean and easy to learn how to use to encourage users of the site to want to come back and use it again and again. Content is hidden from users of the site who are not logged in and prompt the user to register or login to access the different areas of the site. The navbar at the top of the page will change options depending on the login state of the site user.
+I tried to keep the site structure simple, clean and easy to learn how to use. To encourage users of the site to want to come back and use it again and again. Content is hidden from users of the site who are not logged in and prompt the user to register or login to access the different areas of the site. The navbar at the top of the page will change options depending on the login state of the site user.
 
 
 ![navbar logged in](./assets/readme-images/logged-in-links.png)
@@ -334,7 +334,7 @@ Login form
 
 ### Custom 404 page
 
-I decided to add a customer 404 page that adds a bit of humour if the user navigates to an unknown URL, it stays within the football theme and I found the gif on 
+I decided to add a custom 404 page that adds a bit of humour if the user navigates to an unknown URL, it stays within the football theme and I found the gif on 
 [Giphy](https://giphy.com/happydogstickers).
 
 404 page
@@ -355,7 +355,7 @@ There is scope for a lot of expansion to The Final Whistle. The site as it is, i
 
 ### Share button
 
-A share button that appears on on the post detail page to enable users of the site to share the posts on other social media platforms which I believe would drive more traffic to the site and would add more functionality to the site as well
+A share button that appears on on the post detail page to enable users of the site to share the posts on other social media platforms which I believe would drive more traffic to the site and would add more functionality to the site as well.
 
 ### Favourite posts
 
@@ -373,9 +373,9 @@ The ability to use other social networks to log into the site this would bring t
 
 To give users of the site the option to change their passwords and also reset their passwords as well if they forget what it is. When implementing this I would also add in confirmation emails to users of the site on succesfully creating their accounts.
 
-### Team databse/model
+### Team database/model
 
-I would also like to add a database for the football teams as well with individual pages that gives a brief overview and history for each club storeed in the database.
+I would also like to add a database for the football teams as well with individual pages that gives a brief overview and history for each club stored in the database.
 
 [Back to table of contents](#table-of-contents)
 
@@ -539,7 +539,7 @@ I checked the CSS of the site using [W3C CSS](https://jigsaw.w3.org/css-validato
 
 ### JavaScript
 
-I tested the javascript code using [jshint](assets/code-check-images/views-py-check.png) woth any errors found corrected the errors that were found was a few missing semicolons
+I tested the javascript code using [jshint](assets/code-check-images/views-py-check.png) with any errors found corrected the errors that were found was a few missing semicolons.
 
 ![javascript check](./assets/code-check-images/jshint-screenshot.png)
 
@@ -565,7 +565,7 @@ Views file
 
 ## Lighthouse testing 
 
-I used the lighthouse testing in Chrome dev tools to test my site also. When testing the site using lighthouse I found my page had a slow load time so I implemented changes to the site code regarding this. Firstly I moved any script elements that were in the head of my HTML file to the bottom of the page and secondly I removed jQuery from my site as this was causing a lot of speed issues and updated the javascript code to ensure the same functionality was available. There is a difference in the lighthouse testing from the tests in the dev tools compared to the the tests completed on the PageSpeed insights website. This is reagrding the best practices section on the website it is 100 and inside dev tools it is 92 it states this is because of issues raised in the issues tab but they do not show so I have been unable to fix this discrepancy.
+I used the lighthouse testing in Chrome dev tools to test my site also. When testing the site using lighthouse I found my page had a slow load time so I implemented changes to the site code regarding this. Firstly I moved any script elements that were in the head of my HTML file to the bottom of the page and secondly I removed jQuery from my site as this was causing a lot of speed issues and updated the javascript code to ensure the same functionality was available. There is a difference in the lighthouse testing from the tests in the dev tools compared to the the tests completed on the PageSpeed insights website. This is regarding the best practices section on the website it is 100 and inside dev tools it is 92 it states this is because of issues raised in the issues tab but they do not show so I have been unable to fix this discrepancy.
 
 ### Lighthouse homepage test
 

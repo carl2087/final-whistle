@@ -23,7 +23,7 @@
                         <!-- Modal Trigger -->
                         <button class="waves-effect waves-light btn form-but com-but body-text ">
                             <a
-                                class="  modal-trigger"
+                                class="modal-trigger"
                                 href="#modal1"><strong>Cancel</strong>
                             </a>
                         </button>
@@ -33,7 +33,7 @@
                             <div class="modal-content">
                                 <h4 class="title-text">Are you sure you want to cancel editing your post?</h4>
                                 <strong>
-                                    <p class="body-text">Any progres you've made so far will be lost!</p>
+                                    <p class="body-text">Any progress you've made so far will be lost!</p>
                                 </strong>
                             </div>
                             <div class="modal-footer">
@@ -59,13 +59,12 @@
             {% endif %}
         {% endif %}
         {% if posted is True %}
-        
             <div class="col s12">
                 <p class="body-text flow-text">Your post has been edited succesfully!</p>
                 <p class="body-text flow-text">To go back to the homepage please click <a class="edit-post-links" href="{% url 'home' %}"><strong>HERE</strong></a> or to go back to your posts
                 please click <a class="edit-post-links" href="{% url 'my_posts' %}"><strong>HERE.</strong></a></p>
             </div>
-            {% endif %}
+        {% endif %}
 </div>
         
 </div>
