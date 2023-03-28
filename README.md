@@ -51,7 +51,7 @@ The goal for the site owner is to provide a stable user experience that is enjoy
 
 ## Agile development
 
-I managed this project using an [Agile](https://agilemanifesto.org/) methodology. I used GitHub projects to refine epic tasks to break them down into user stories. This ensured that tracking and organising the project into iterations was manageable. The GitHub project board had a to do section where user stories where first placed, an in progress tab where user stories where moved to when being worked on, a done section where the stories where moved when completed. A bugs tab for any coding problems that arose during the process and a won't-have section for features that where not included in this stage of the project.
+I managed this project using an [Agile](https://agilemanifesto.org/) methodology. The Agile methdod I implemented was the use of a kanban board. I used GitHub projects to refine epic tasks to break them down into user stories. This ensured that tracking and organising the project into iterations was manageable. The GitHub project board had a to do section where user stories where first placed, an in progress tab where user stories where moved to when being worked on, a done section where the stories where moved when completed. A bugs tab for any coding problems that arose during the process and a won't-have section for features that where not included in this stage of the project.
 
 [The Final Whistle user stories](https://github.com/users/carl2087/projects/7)
 
@@ -68,7 +68,7 @@ I also used GitHub projects to organise my project tasks in the same way this in
 
 ## Database schema
 
-I drew the database schemas up in Microsoft Excel &copy; The shema diagrams where used to plan the database models, fields and also the relationships between the models and how they would interact with each other. The Final Whistle consists of two models one for comments and one for posts. There is an oppurttunity to create a third model for the football teams in a future release of the site.
+I drew the database schemas up in Microsoft Excel &copy; The shema diagrams where used to plan the database models, fields and also the relationships between the models and how they would interact with each other. The Final Whistle consists of two models one for comments and one for posts. There is an oppurtunity to create a third model for the football teams in a future release of the site.
 
 ![Database schema comment model](./assets/wireframes/comment-model-diagram.png)
 ![Database schema post model](./assets/wireframes/post-model-diagram.png)
@@ -79,8 +79,8 @@ I drew the database schemas up in Microsoft Excel &copy; The shema diagrams wher
 
 # User experience and design
 
-When planning the site and how it would affect the user experince is first created wireframes for the project to decide on the layout of each page.
-I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme for the site. I used Google &copy; fonts to decide on which fonts I would use for the site. I have included images below relating to the steps I undertook.
+When planning the site and how it would affect the user experience is first created wireframes for the project to decide on the layout of each page.
+I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme for the site. I used Google fonts to decide on which fonts I would use for the site. I have included images below relating to the steps I undertook.
 
 ## Wireframe images
 
@@ -150,7 +150,7 @@ I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme fo
 
 ## Colour sheme
 
-I used [Color Hunt](https://colorhunt.co/) to select the colour scheme for the site I find it a useful site as it has a random generator button so you can see a lot of different colour schemes quickly. I decided to use the colour palette below as the colours are not too bright and work well together.
+I used [Color Hunt](https://colorhunt.co/) to select the colour scheme for the site. I decided to use the colour palette below as the colours are not too bright and work well together.
 
 Color hunt palette
 
@@ -177,7 +177,7 @@ I created the favicon on [real favicon generator](https://realfavicongenerator.n
 
 ## Typography
 
-I used Google&copy; fonts to decide on which type of fonts to use on The Final Whistle for headings and titles I used [Nunito](https://fonts.google.com/specimen/Nunito) and for bodies of text I used [Rubik](https://fonts.google.com/specimen/Rubik). I chose these fonts because they are clear and synergize well together I chose to use a different fonts for headers and bodies of text just to give the site some nice customization.
+I used Google fonts to decide on which type of fonts to use on The Final Whistle for headings and titles I used [Nunito](https://fonts.google.com/specimen/Nunito) and for bodies of text I used [Rubik](https://fonts.google.com/specimen/Rubik). I chose these fonts because they are clear and synergize well together I chose to use a different fonts for headers and bodies of text just to give the site some nice customization.
 
 
 ![Nunito](./assets/readme-images/nunito-title-text.png)
@@ -185,7 +185,7 @@ I used Google&copy; fonts to decide on which type of fonts to use on The Final W
 
 ## CSS framework
 
-To help speed up design and building of the site I decided to use the Materialize&copy; front-end framework I chose this because firstly I like the way the cards looked and worked which forms the basis of the index page on the site and also to challenge myself to use a different framework from Bootstrap&copy;. This did have it's challenges along the way to ensure everything worked as it should but in the end I think it was the right choice and would do it again.
+To help speed up design and building of the site I decided to use the Materialize front-end framework I chose this because firstly I like the way the cards looked and worked which forms the basis of the index page on the site and also to challenge myself to use a different framework from Bootstrap. This did have it's challenges along the way to ensure everything worked as it should but in the end I think it was the right choice and would do it again.
 
 
 ![Materialize](./assets/readme-images/materialize-logo.png)
@@ -251,7 +251,7 @@ Tablet and mobile footer
 
 ### Create a post 
 
-On this page thsi enables a registered or logged in user to create a post if the user is not logged in they will be prompted to create an account or sign in to their account. The form will prompt the user if they have not filled out a required part of the form. The user can choose whether they want to upload their own image if the user declines to do so, a generic image is added automatically. When a user has succesfully submitted a post they are shown a message that lets them know that their post is awaiting approval.
+On this page this enables a registered or logged in user to create a post if the user is not logged in they will be prompted to create an account or sign in to their account. The form will prompt the user if they have not filled out a required part of the form. The user can choose whether they want to upload their own image if the user declines to do so, a generic image is added automatically. When a user has succesfully submitted a post they are shown a message that lets them know that their post is awaiting approval.
 
 Create a post page
 
@@ -322,7 +322,7 @@ Number of comments icon
 
 ### Login and register 
 
-To give visitors of the site the ability to register for an account and to be able to sign in etc. I used a Django feature called allauth this makes it easier to set up security for users and streamlines the whole process.
+To give visitors of the site the ability to register for an account and to be able to sign in etc. I used a Django app called allauth this makes it easier to set up security for users and streamlines the whole process.
 
 Register form
 
@@ -351,7 +351,7 @@ Back to top button
 
 ## Future Features
 
-There is scope for a lot of expansion to The Final Whistle. The site as it is, is a minimal viable product, however there are features I would like to add in the future.
+There is scope for a lot of expansion to The Final Whistle. The site as it is, is a minimum viable product, however there are features I would like to add in the future.
 
 ### Share button
 
