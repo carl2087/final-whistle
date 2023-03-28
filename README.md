@@ -485,6 +485,10 @@ The post detail page was not rendering in the front end due to a spelling mistak
 
 There has been extensive testing to ensure that no issues to my knowledge remain.
 
+### Edit post Modal
+
+When editing a post when a user clicks cancel editing a modal should appear asking the user to confirm if they want to cancel the editing or return to the editing. On some occasions the modal does not appear when the cancel edit button is clicked and the user is shown the edit succesful screen. I have checked the code and it is correct as the modal does show the majority of the time. 
+
 ## Validation tests
 
 ### W3C HTML
