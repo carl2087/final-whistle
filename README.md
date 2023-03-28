@@ -489,6 +489,8 @@ There has been extensive testing to ensure that no issues to my knowledge remain
 
 When editing a post when a user clicks cancel editing a modal should appear asking the user to confirm if they want to cancel the editing or return to the editing. On some occasions the modal does not appear when the cancel edit button is clicked and the user is shown the edit succesful screen. I have checked the code and it is correct as the modal does show the majority of the time. 
 
+I have created a file to fully describe the manual testing process here. [Testing documentation](testing.md)
+
 ## Validation tests
 
 ### W3C HTML
