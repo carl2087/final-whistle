@@ -28,7 +28,7 @@ The site is hosted on Heroku the link is below
 ## Main objective
 
 The main objective of this project was to create a full stack website as part of [The Code Institute](https://codeinstitute.net/) Diploma in Full Stack Software Development.
-This project is my fourth portfolio project on the course. Amongst other assesment criteria, this project had to be built using HTML, CSS, JavaScript, Python and the Django framework, and feature full CRUD functionality and user authorisation. The project also had to be planned and designed using agile methodologies. 
+This project is my fourth portfolio project on the course. Amongst other assessment criteria, this project had to be built using HTML, CSS, JavaScript, Python and the Django framework, and feature full CRUD functionality and user authorisation. The project also had to be planned and designed using agile methodologies. 
 
 One of my main interests is sports I decided to create a website where users of the site can create posts about the current affairs in football.
 
@@ -42,7 +42,7 @@ customise the created posts with an image.
 
 ## Site owner
 
-The goal for the site owner is to provide a stable user experience that is enjoyable to encourage user interaction. The site should be accessible and appealing to new users, it should also be scaleable with an easy way to add more features in the future. Content on the site should be easily moderated to ensure community standards are met and be of high quality. 
+The goal for the site owner is to provide a stable user experience that is enjoyable to encourage user interaction. The site should be accessible and appealing to new users, it should also be scalable with an easy way to add more features in the future. Content on the site should be easily moderated to ensure community standards are met and be of high quality. 
 
 
 [Back to table of contents](#table-of-contents)
@@ -51,7 +51,7 @@ The goal for the site owner is to provide a stable user experience that is enjoy
 
 ## Agile development
 
-I managed this project using an [Agile](https://agilemanifesto.org/) methodology. The Agile methdod I implemented was the use of a kanban board. I used GitHub projects to refine epic tasks to break them down into user stories. This ensured that tracking and organising the project into iterations was manageable. The GitHub project board had a to do section where user stories where first placed, an in progress tab where user stories where moved to when being worked on, a done section where the stories where moved when completed. A bugs tab for any coding problems that arose during the process and a won't-have section for features that where not included in this stage of the project.
+I managed this project using an [Agile](https://agilemanifesto.org/) methodology. The Agile method I implemented was the use of a Kanban board. I used GitHub projects to refine epic tasks to break them down into user stories. This ensured that tracking and organising the project into iterations was manageable. The GitHub project board had a to do section where user stories where first placed, an in progress tab where user stories where moved to when being worked on, a done section where the stories where moved when completed. A bugs tab for any coding problems that arose during the process and a won't-have section for features that where not included in this stage of the project.
 
 [The Final Whistle user stories](https://github.com/users/carl2087/projects/7)
 
@@ -68,7 +68,7 @@ I also used GitHub projects to organise my project tasks in the same way this in
 
 ## Database schema
 
-I drew the database schemas up in Microsoft Excel The schema diagrams were used to plan the database models, fields and also the relationships between the models and how they would interact with each other. The Final Whistle consists of two models one for comments and one for posts. There is an oppurtunity to create a third model for the football teams in a future release of the site.
+I drew the database schemas up in Microsoft Excel The schema diagrams were used to plan the database models, fields and also the relationships between the models and how they would interact with each other. The Final Whistle consists of two models one for comments and one for posts. There is an opportunity to create a third model for the football teams in a future release of the site.
 
 ![Database schema comment model](./assets/wireframes/comment-model-diagram.png)
 ![Database schema post model](./assets/wireframes/post-model-diagram.png)
@@ -148,7 +148,7 @@ I then used [Color Hunt](https://colorhunt.co/) to decide on the colour theme fo
 ![Register page mobile](./assets/wireframes/reg-page-mob.png)
 
 
-## Colour sheme
+## Colour scheme
 
 I used [Color Hunt](https://colorhunt.co/) to select the colour scheme for the site. I decided to use the colour palette below as the colours are not too bright and work well together.
 
@@ -223,7 +223,7 @@ Home page mobile phone
 
 ### Navbar
 
-The site has a navbar along the top which which has links for the home page which is The Final Whistle logo and depending on the current logged in state for the user there will be links to register and login or logout. There is also a home button link as well which is always visible. On smaller devices The Final Whistle logo moves to the centre of the navbar and a hamburger menu appears with the relevant site links nested inside.
+The site has a navbar along the top which has links for the home page which is The Final Whistle logo and depending on the current logged in state for the user there will be links to register and login or logout. There is also a home button link as well which is always visible. On smaller devices The Final Whistle logo moves to the centre of the navbar and a hamburger menu appears with the relevant site links nested inside.
 
 Desktop navbar
 
@@ -251,7 +251,7 @@ Tablet and mobile footer
 
 ### Create a post 
 
-On this page this enables a registered or logged in user to create a post if the user is not logged in they will be prompted to create an account or sign in to their account. The form will prompt the user if they have not filled out a required part of the form. The user can choose whether they want to upload their own image if the user declines to do so, a generic image is added automatically. When a user has succesfully submitted a post they are shown a message that lets them know that their post is awaiting approval.
+On this page this enables a registered or logged in user to create a post if the user is not logged in they will be prompted to create an account or sign in to their account. The form will prompt the user if they have not filled out a required part of the form. The user can choose whether they want to upload their own image if the user declines to do so, a generic image is added automatically. When a user has successfully submitted a post they are shown a message that lets them know that their post is awaiting approval.
 
 Create a post page
 
@@ -261,9 +261,9 @@ Screen when not logged in
 
 ![The Final Whistle not logged in create a post page](./assets/readme-images/not-logged-in-create-post.png)
 
-Post succesful message
+Post successful message
 
-![The Final Whistle post successful](./assets/readme-images/post-succesful-message.png)
+![The Final Whistle post successful](./assets/readme-images/post-successful-message.png)
 
 
 ### My posts page
@@ -278,7 +278,7 @@ Edit post
 
 ![The Final Whistle edit post page](./assets/readme-images/edit-post-page.png)
 
-Edit succesful message
+Edit successful message
 
 ![The Final Whistle edit successful page](./assets/readme-images/post-edit-succesful.png)
 
@@ -355,7 +355,7 @@ There is scope for a lot of expansion to The Final Whistle. The site as it is, i
 
 ### Share button
 
-A share button that appears on on the post detail page to enable users of the site to share the posts on other social media platforms which I believe would drive more traffic to the site and would add more functionality to the site as well.
+A share button that appears on the post detail page to enable users of the site to share the posts on other social media platforms which I believe would drive more traffic to the site and would add more functionality to the site as well.
 
 ### Favourite posts
 
@@ -367,11 +367,11 @@ The ability to search through posts on the site by team, title, user, content an
 
 ### Social network sign in
 
-The ability to use other social networks to log into the site this would bring the site in line with a lot of other websites and is a nice qulaity of life improvement.
+The ability to use other social networks to log into the site this would bring the site in line with a lot of other websites and is a nice quality of life improvement.
 
 ### Password reset
 
-To give users of the site the option to change their passwords and also reset their passwords as well if they forget what it is. When implementing this I would also add in confirmation emails to users of the site on succesfully creating their accounts.
+To give users of the site the option to change their passwords and also reset their passwords as well if they forget what it is. When implementing this I would also add in confirmation emails to users of the site on successfully creating their accounts.
 
 ### Team database/model
 
@@ -473,7 +473,7 @@ I deployed the site straight away to Heroku to ensure the Django app was set up 
 
 ### HTML tags rendering in cards on the home page
 
-This was due to Summernote not being compatible with Materilize and the HTML tags where showing in the front end. To fix this I removed summernote from my site and just used the built in Django admin area.
+This was due to Summernote not being compatible with Materialize and the HTML tags where showing in the front end. To fix this I removed summernote from my site and just used the built in Django admin area.
 
 ### Pagination links not working
 
@@ -487,7 +487,7 @@ There has been extensive testing to ensure that no issues to my knowledge remain
 
 ### Edit post Modal
 
-When editing a post when a user clicks cancel editing a modal should appear asking the user to confirm if they want to cancel the editing or return to the editing. On some occasions the modal does not appear when the cancel edit button is clicked and the user is shown the edit succesful screen. I have checked the code and it is correct as the modal does show the majority of the time. 
+When editing a post when a user clicks cancel editing a modal should appear asking the user to confirm if they want to cancel the editing or return to the editing. On some occasions the modal does not appear when the cancel edit button is clicked and the user is shown the edit successful screen. I have checked the code and it is correct as the modal does show the majority of the time. 
 
 I have created a file to fully describe the manual testing process here. [Testing documentation](testing.md)
 
@@ -545,7 +545,7 @@ I checked the CSS of the site using [W3C CSS](https://jigsaw.w3.org/css-validato
 
 ### JavaScript
 
-I tested the javascript code using [jshint](assets/code-check-images/views-py-check.png) with any errors found corrected the errors that were found was a few missing semicolons.
+I tested the JavaScript code using [jshint](assets/code-check-images/views-py-check.png) with any errors found corrected the errors that were found was a few missing semicolons.
 
 ![javascript check](./assets/code-check-images/jshint-screenshot.png)
 
@@ -571,7 +571,7 @@ Views file
 
 ## Lighthouse testing 
 
-I used the lighthouse testing in Chrome dev tools to test my site also. When testing the site using lighthouse I found my page had a slow load time so I implemented changes to the site code regarding this. Firstly I moved any script elements that were in the head of my HTML file to the bottom of the page and secondly I removed jQuery from my site as this was causing a lot of speed issues and updated the javascript code to ensure the same functionality was available. There is a difference in the lighthouse testing from the tests in the dev tools compared to the the tests completed on the PageSpeed insights website. This is regarding the best practices section on the website it is 100 and inside dev tools it is 92 it states this is because of issues raised in the issues tab but they do not show so I have been unable to fix this discrepancy.
+I used the lighthouse testing in Chrome dev tools to test my site also. When testing the site using lighthouse I found my page had a slow load time so I implemented changes to the site code regarding this. Firstly I moved any script elements that were in the head of my HTML file to the bottom of the page and secondly I removed jQuery from my site as this was causing a lot of speed issues and updated the JavaScript code to ensure the same functionality was available. There is a difference in the lighthouse testing from the tests in the dev tools compared to the the tests completed on the PageSpeed insights website. This is regarding the best practices section on the website it is 100 and inside dev tools it is 92 it states this is because of issues raised in the issues tab but they do not show so I have been unable to fix this discrepancy.
 
 ### Lighthouse homepage test
 
