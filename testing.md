@@ -18,6 +18,7 @@
 * Cards and links
 
     - &check; Is paginated by 8 posts.
+    - &check; Pagination links work correctly.
     - &check; Create a post link navigates to correct page.
     - &check; My posts link navigates to correct page.
     - &check; Card action works as intended. Click on the image or posts title lifts up the card to show the excerpt of the post.
@@ -58,33 +59,41 @@
 
 # Post detail page
 
-* Post detail page features
-
-    - &check; If user is logged in they can leave a comment.
-    - &check; Users can upvote and downvote posts if logged in.
-    - &check; Users can read comments on a post.
-    - &check; When the image is clicked opn it increases to full screen.
-    - &check; Is users are not logged in they cannot upvote or downvote.
-    - &check; If a user is not logged in they cannot leave a comment.
-    - &check; If a user is not logged in they are prompted to login to leave a comment.
-    - &check; Tags are shown to user underneath the image.
-    - &check; The number of comments are shown to the user next to the upvote and downvote arrows.
-    - &check; When a user leaves a comment they are shown a message for awaiting approval.
+- &check; If user is logged in they can leave a comment.
+- &check; Users can upvote and downvote posts if logged in.
+- &check; Users can read comments on a post.
+- &check; When the image is clicked opn it increases to full screen.
+- &check; Is users are not logged in they cannot upvote or downvote.
+- &check; If a user is not logged in they cannot leave a comment.
+- &check; If a user is not logged in they are prompted to login to leave a comment.
+- &check; Tags are shown to user underneath the image.
+- &check; The number of comments are shown to the user next to the upvote and downvote arrows.
+- &check; When a user leaves a comment they are shown a message for awaiting approval.
 
 # Create post page
 
-* Create post page features
-
-    - &check; Navigates the user to create a post form.
-    - &check; If a required part of the form is not filled out the user is notified.
-    - &check; Image upload is not required.
-    - &check; When a post is submitted user is taken to the posts successful page.
-    - &check; Post successful page link navigates to home page.
-
+- &check; Navigates the user to create a post form.
+- &check; If a required part of the form is not filled out the user is notified.
+- &check; Image upload is not required.
+- &check; When a post is submitted user is taken to the posts successful page.
+- &check; Post successful page link navigates to home page.
 
 # Login 
 
+- &check; User can login successfully.
+- &check; User is shown a brief message to notify login successful.
+- &check; Login alert disapears after a few seconds.
+
 # Logout
+
+- &check; User can logout successfully.
+- &check; User is shown a brief message to notify logout successful.
+- &check; Logout alert disapears after a few seconds.
+
+# Registration
+
+- &check; Users can create an account.
+- &check; Users can log in with the account that has been created.
 
 # Responsiveness
 
@@ -106,3 +115,4 @@
 * Back to top button
 
     - &check; Back to top button appears when screen scrolls more than 600 pixels down.
+    - &check; When clicked takes user back to top of screen.
