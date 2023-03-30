@@ -8,6 +8,7 @@
    - &check; User can click login to login to the site.
    - &check; Current logged in status is shown to user, when logged in logout link is active and when not logged in register and login links are active.
    - &check; All links navigate to correct page.
+   - &check; User can click logout to logout of the site.
 
 * Footer
 
@@ -27,6 +28,7 @@
 * Create post link
 
     - &check; Navigates the user to create a post form.
+    - &check; Create post form displays correctly.
 
 * My posts link
 
@@ -62,13 +64,14 @@
 - &check; If user is logged in they can leave a comment.
 - &check; Users can upvote and downvote posts if logged in.
 - &check; Users can read comments on a post.
-- &check; When the image is clicked opn it increases to full screen.
+- &check; When the image is clicked on it increases to full screen.
 - &check; Is users are not logged in they cannot upvote or downvote.
 - &check; If a user is not logged in they cannot leave a comment.
 - &check; If a user is not logged in they are prompted to login to leave a comment.
 - &check; Tags are shown to user underneath the image.
 - &check; The number of comments are shown to the user next to the upvote and downvote arrows.
 - &check; When a user leaves a comment they are shown a message for awaiting approval.
+- &check; Users cannot submit an empty comment.
 
 # Create post page
 
@@ -82,13 +85,13 @@
 
 - &check; User can login successfully.
 - &check; User is shown a brief message to notify login successful.
-- &check; Login alert disapears after a few seconds.
+- &check; Login alert disappears after a few seconds.
 
 # Logout
 
 - &check; User can logout successfully.
 - &check; User is shown a brief message to notify logout successful.
-- &check; Logout alert disapears after a few seconds.
+- &check; Logout alert disappears after a few seconds.
 
 # Registration
 
@@ -101,7 +104,7 @@
 
     - &check; Hamburger menu appears on smaller screens.
     - &check; Links work correctly inside hamburger menu.
-    - &check; The Final Whistle icon moves to center of bar on smaller screens.
+    - &check; The Final Whistle icon moves to centre of bar on smaller screens.
 
 * Footer
 
@@ -116,3 +119,11 @@
 
     - &check; Back to top button appears when screen scrolls more than 600 pixels down.
     - &check; When clicked takes user back to top of screen.
+
+* Post detail page
+
+    - &check; Content is rendered correctly.
+    - &check; Conetent is in correct order.
+    - &check; Images are not distorted.
+
+[Back to ReadMe](README.md)

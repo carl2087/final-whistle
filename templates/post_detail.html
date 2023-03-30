@@ -36,7 +36,7 @@
         </strong>
         {% endwith %}
     </div>
-    <!-- is user is logged in they can leave an upvote or downvote -->
+    <!-- if user is logged in they can leave an upvote or downvote -->
     {% if user.is_authenticated %}
     <strong>
         <form action="{% url 'post_upvote' post.slug %}" method="POST">
