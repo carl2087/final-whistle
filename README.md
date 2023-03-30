@@ -8,6 +8,7 @@
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits & Acknowledgements](#credits)
+* [Manual testing documentation](testing.md)
 
 # The Final Whistle
 
